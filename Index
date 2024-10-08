@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINS THE DEEJAAY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>WINS THE DEEJAAY</h1>
+        <nav>
+            <ul>
+                <li><a href="#" aria-label="Ir a Inicio">Inicio</a></li>
+                <li><a href="#" aria-label="Leer Biografía">Biografía</a></li>
+                <li><a href="#" aria-label="Ver Eventos">Eventos</a></li>
+                <li><a href="#" aria-label="Escuchar Música">Música</a></li>
+                <li><a href="#" aria-label="Contactar">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>WINS THE DEEJAAY</h2>
+            <p>DJ y Beatmaker.</p>
+        </section>
+        
+        <section class="events">
+            <h3>Próximos Eventos</h3>
+            <ul>
+                <li> PASTO 26 DE OCT</li>
+                <li>AFROVICE (CALI) - 18 OCT</li>
+                <li>SHOW DAWER X DAMPER (MEDELLIN) - 23 NOV</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> WINS THE DEEJAAY. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
