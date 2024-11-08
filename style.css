@@ -1,0 +1,332 @@
+/* General body styles */
+body {
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    background-image: url("sultana2016.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: linear-gradient(45deg, #FF8C00, #F4B8D7);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative; /* Necesario para colocar los botones en la parte superior */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Redes sociales: Botones en la parte superior */
+.social-buttons {
+    position: absolute; /* Los botones estarán posicionados sobre el header */
+    top: 30px; /* Distancia desde la parte superior */
+    left: 50%; /* Los centra horizontalmente */
+    transform: translateX(-50%); /* Ajuste para el centrado */
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    z-index: 10; /* Asegura que los botones queden por encima de otros elementos */
+}
+
+/* Estilo básico para los botones de redes sociales */
+.social-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Iconos dentro de los botones */
+.social-btn i {
+    font-size: 18px;
+    color: inherit;
+}
+
+/* Colores de cada red social */
+.instagram {
+    color: #E4405F;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.tiktok {
+    color: #000000;
+}
+
+.soundcloud {
+    color: #FF5500;
+}
+
+/* Efecto hover para los botones */
+.social-btn:hover {
+    opacity: 0.8;
+    border: 2px solid #fff;
+}
+
+/* Efecto hover con cambio de color de borde */
+.social-btn:hover.instagram {
+    border-color: #C13584;
+}
+
+.social-btn:hover.facebook {
+    border-color: #3b5998;
+}
+
+.social-btn:hover.tiktok {
+    border-color: #39b54a;
+}
+
+.social-btn:hover.soundcloud {
+    border-color: #ff2a00;
+}
+
+/* Hero section styling */
+.hero {
+    padding: 60px 60px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Events section styling */
+.events {
+    padding: 40px 20px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.8;
+    background-color: linear-gradient(45deg, #FF8C00, #F4B8D7);
+    color: #ffffff;
+    text-align: center;
+}
+
+.events h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.events ul li {
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+/* SoundCloud player section */
+.soundcloud-player {
+    padding: 20px;
+    text-align: center;
+    background-color: linear-gradient(45deg, #FF8C00, #F4B8D7);
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.soundcloud-player iframe {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    height: 166px;
+}
+
+/* Contact form styles */
+#contacto {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Modificación del formulario de contacto */
+form {
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin: 0 auto;
+    border: 1.7px solid #FFDD00;
+}
+
+form label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #222;
+    font-size: 1em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    background-color: #ffffff;
+}
+
+form button {
+    background-color: #552582;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #3e1e6a;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Gallery section */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.galeria-grid .foto img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de biografía */
+.biografia {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #f4f4f4;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.biografia h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #FF8C00;
+}
+
+.biografia p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #cccccc;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .events {
+        padding: 30px 15px;
+    }
+
+    .social-buttons {
+        top: 10px; /* Ajuste en la posición para pantallas pequeñas */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    form {
+        width: 80%;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
