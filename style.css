@@ -48,7 +48,7 @@ nav a {
 .social-buttons {
     position: absolute; /* Los botones estarán posicionados sobre el header */
     top: 30px; /* Distancia desde la parte superior */
-    left: 50%; /* Los centra horizontalmente */
+    right:10%; /* Los mueve a la derecha */
     transform: translateX(-50%); /* Ajuste para el centrado */
     display: flex;
     gap: 10px; /* Espacio entre los botones */
