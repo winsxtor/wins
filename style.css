@@ -48,7 +48,7 @@ nav a {
 .social-buttons {
     position: absolute; /* Hace que los botones estén sobre el header */
     top: 30px; /* Distancia desde la parte superior */
-    left: 90px; /* Distancia desde el borde izquierdo */
+    right: 20px; /* Distancia desde el borde derecho */
     display: flex;
     gap: 10px; /* Espacio entre los botones */
     z-index: 10; /* Asegura que los botones queden por encima de otros elementos */
@@ -362,14 +362,16 @@ main {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* Ajuste de los botones de redes sociales para dispositivos móviles */
-    .social-buttons {
-        position: relative;
-        top: 0px; /* Distancia desde la parte superior */
-        left: 80%; /* Centra los botones */
-        transform: translateX(-50%); /* Centra los botones horizontalmente */
-        z-index: 100; /* Los coloca por encima de otros elementos */
-    }
+   /* Ajuste de los botones de redes sociales para dispositivos móviles */
+.social-buttons {
+    position: absolute;
+    top: 100px; /* Distancia desde la parte superior, ajusta si es necesario */
+    left: 50%; /* Centra los botones horizontalmente */
+    transform: translateX(-50%); /* Ajusta para que estén centrados */
+    z-index: 100; /* Los coloca por encima de otros elementos */
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
 
     .social-btn {
         width: 30px; /* Tamaño de los botones en móviles */
