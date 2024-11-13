@@ -431,6 +431,30 @@ main {
     color: #ccc;
 }
 
+/* Estilo para la nueva sección "Sígueme en Redes Sociales" */
+#sígueme-redes {
+
+    text-align: center; /* Centra el contenido */
+    padding: 40px 20px;
+    background: linear-gradient(45deg, #FF8C00, #F4B8D7); /* Fondo similar al del header con gradiente */
+    color: #ffffff;
+    margin-top: 40px; /* Espacio superior para separar esta sección de la galería */
+}
+
+#sígueme-redes h3 {
+
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFDD00; /* Color amarillo para el título */
+}
+
+#sígueme-redes p {
+
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
 /* Estilos para los botones de redes sociales en esta sección */
 .social-buttons {
 
