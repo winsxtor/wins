@@ -342,19 +342,21 @@ main {
 
 /* Estilos para los botones de redes sociales en esta sección */
 .social-buttons {
-    display: flex;
-    justify-content: center; /* Centra los botones en la pantalla */
-    gap: 30px; /* Aumenta el espacio entre los botones */
+    display: flex;                  /* Utiliza flexbox para alinearlos en fila */
+    justify-content: center;         /* Centra los botones horizontalmente */
+    align-items: center;             /* Alinea los botones verticalmente */
+    gap: 30px;                       /* Aumenta el espacio entre los botones */
+    margin-top: 20px;                /* Espacio superior para separar los botones de los textos */
 }
 
 .social-btn {
-    width: 50px; /* Aumenta el tamaño de los botones */
-    height: 50px;
-    font-size: 30px; /* Aumenta el tamaño de los iconos */
+    width: 60px;                     /* Aumenta el tamaño de los botones */
+    height: 60px;
+    font-size: 35px;                 /* Aumenta el tamaño de los iconos */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Mantiene los botones circulares */
+    border-radius: 50%;              /* Mantiene los botones circulares */
     background-color: #ffffff;
     border: 2px solid transparent;
     transition: background-color 0.3s ease, border 0.3s ease;
@@ -365,7 +367,7 @@ main {
 }
 
 .social-btn i {
-    font-size: 24px; /* Ajuste de tamaño para los iconos */
+    font-size: 30px;                 /* Ajuste de tamaño para los iconos dentro de los botones */
 }
 
 /* Colores de cada red social */
