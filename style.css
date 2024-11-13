@@ -44,78 +44,6 @@ nav a {
     font-weight: bold;
 }
 
-/* Redes sociales: Botones en la parte superior izquierda */
-.social-buttons {
-    position: absolute; /* Hace que los botones estén sobre el header */
-    top: 30px; /* Distancia desde la parte superior */
-    right: 20px; /* Distancia desde el borde derecho */
-    display: flex;
-    gap: 10px; /* Espacio entre los botones */
-    z-index: 10; /* Asegura que los botones queden por encima de otros elementos */
-}
-
-/* Estilo básico para los botones de redes sociales */
-.social-btn {
-    display: inline-flex; /* Alinea los iconos de las redes sociales */
-    justify-content: center;
-    align-items: center;
-    width: 30px; /* Ajusta el tamaño de los iconos */
-    height: 30px;
-    border-radius: 50%; /* Hace que los iconos sean circulares */
-    background-color: #ffffff;
-    border: 2px solid transparent;
-    transition: background-color 0.3s ease, border 0.3s ease;
-}
-.social-btn a {
-    target: _blank; /* Abrir enlaces en nuevas pestañas */
-}
-
-/* Iconos dentro de los botones */
-.social-btn i {
-    font-size: 18px;
-    color: inherit;
-}
-
-/* Colores de cada red social */
-.instagram {
-    color: #E4405F;
-}
-
-.facebook {
-    color: #3b5998;
-}
-
-.tiktok {
-    color: #000000;
-}
-
-.soundcloud {
-    color: #FF5500;
-}
-
-/* Efecto hover para los botones */
-.social-btn:hover {
-    opacity: 0.8;
-    border: 2px solid #fff;
-}
-
-/* Efecto hover con cambio de color de borde */
-.social-btn:hover.instagram {
-    border-color: #C13584;
-}
-
-.social-btn:hover.facebook {
-    border-color: #3b5998;
-}
-
-.social-btn:hover.tiktok {
-    border-color: #39b54a;
-}
-
-.social-btn:hover.soundcloud {
-    border-color: #ff2a00;
-}
-
 /* Hero section styling */
 .hero {
     padding: 60px 60px;
@@ -361,24 +289,8 @@ main {
     .galeria-grid {
         grid-template-columns: 1fr 1fr;
     }
-
-   /* Ajuste de los botones de redes sociales para dispositivos móviles */
-.social-buttons {
-    position: absolute;
-    top: 100px; /* Distancia desde la parte superior, ajusta si es necesario */
-    left: 50%; /* Centra los botones horizontalmente */
-    transform: translateX(-50%); /* Ajusta para que estén centrados */
-    z-index: 100; /* Los coloca por encima de otros elementos */
-    display: flex;
-    gap: 10px; /* Espacio entre los botones */
 }
 
-    .social-btn {
-        width: 30px; /* Tamaño de los botones en móviles */
-        height: 40px;
-        font-size: 20px; /* Tamaño de los iconos */
-    }
-}
 /* Estilos para la sección de biografía */
 .biografia {
     max-width: 800px; /* Limita el ancho de la biografía */
@@ -409,7 +321,6 @@ main {
 
 /* Estilo para la nueva sección "Sígueme en Redes Sociales" */
 #sígueme-redes {
-
     text-align: center; /* Centra el contenido */
     padding: 40px 20px;
     background: linear-gradient(45deg, #FF8C00, #F4B8D7); /* Fondo similar al del header con gradiente */
@@ -418,38 +329,12 @@ main {
 }
 
 #sígueme-redes h3 {
-
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #FFDD00; /* Color amarillo para el título */
 }
 
 #sígueme-redes p {
-
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #ccc;
-}
-
-/* Estilo para la nueva sección "Sígueme en Redes Sociales" */
-#sígueme-redes {
-
-    text-align: center; /* Centra el contenido */
-    padding: 40px 20px;
-    background: linear-gradient(45deg, #FF8C00, #F4B8D7); /* Fondo similar al del header con gradiente */
-    color: #ffffff;
-    margin-top: 40px; /* Espacio superior para separar esta sección de la galería */
-}
-
-#sígueme-redes h3 {
-
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #FFDD00; /* Color amarillo para el título */
-}
-
-#sígueme-redes p {
-
     font-size: 1.2em;
     margin-bottom: 30px;
     color: #ccc;
@@ -457,14 +342,12 @@ main {
 
 /* Estilos para los botones de redes sociales en esta sección */
 .social-buttons {
-
     display: flex;
     justify-content: center; /* Centra los botones en la pantalla */
     gap: 30px; /* Aumenta el espacio entre los botones */
 }
 
 .social-btn {
-
     width: 50px; /* Aumenta el tamaño de los botones */
     height: 50px;
     font-size: 30px; /* Aumenta el tamaño de los iconos */
@@ -478,12 +361,10 @@ main {
 }
 
 .social-btn a {
-
     color: inherit;
 }
 
 .social-btn i {
-
     font-size: 24px; /* Ajuste de tamaño para los iconos */
 }
 
@@ -506,7 +387,6 @@ main {
 
 /* Efecto hover para los botones */
 .social-btn:hover {
-
     opacity: 0.8;
     border: 2px solid #fff;
 }
