@@ -321,7 +321,7 @@ main {
 
 /* Estilo para la nueva sección "Sígueme en Redes Sociales" */
 #sigueme-redes {
-    text-align: center; /* Centra el contenido */
+    position: center; /* Centra el contenido */
     padding: 40px 20px;
     background: linear-gradient(45deg, #FF8C00, #F4B8D7); /* Fondo similar al del header con gradiente */
     color: #ffffff;
@@ -342,9 +342,9 @@ main {
 
 /* Estilos para los botones de redes sociales en esta sección */
 .social-buttons {
-    display: flex;                  /* Utiliza flexbox para alinearlos en fila */
+    display: grid;                  /* Utiliza flexbox para alinearlos en fila */
     justify-content: center;         /* Centra los botones horizontalmente */
-    gap: 50px;                       /* Aumenta el espacio entre los botones */
+    gap: 80px;                       /* Aumenta el espacio entre los botones */
     margin-top: 20px;                /* Espacio superior para separar los botones de los textos */
 }
 
