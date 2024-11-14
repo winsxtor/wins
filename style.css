@@ -344,7 +344,6 @@ main {
 .social-buttons {
     display: flex;                  /* Utiliza flexbox para alinearlos en fila */
     justify-content: center;         /* Centra los botones horizontalmente */
-    align-items: center;             /* Alinea los botones verticalmente */
     gap: 30px;                       /* Aumenta el espacio entre los botones */
     margin-top: 20px;                /* Espacio superior para separar los botones de los textos */
 }
