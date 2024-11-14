@@ -318,3 +318,74 @@ main {
     text-align: justify; /* Justifica el texto para mayor coherencia visual */
     color: #cccccc; /* Color de texto más suave */
 }
+
+/* Estilo general para la sección de redes sociales */
+#social-media {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semitransparente */
+    color: #ffffff;
+    text-align: center;
+    margin-top: 40px; /* Espacio superior */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+/* Contenedor para los botones de redes sociales */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio superior de los botones */
+}
+
+/* Estilo para cada botón de red social */
+.social-button {
+    font-size: 24px; /* Tamaño de los iconos */
+    padding: 15px;
+    border-radius: 50%; /* Botones circulares */
+    background-color: #333333; /* Fondo oscuro para los botones */
+    color: #fff; /* Color de los iconos en blanco */
+    text-decoration: none; /* Eliminamos subrayado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Ancho fijo */
+    height: 60px; /* Alto fijo */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Colores específicos para cada red social */
+.social-button.instagram {
+    background-color: #E4405F; /* Instagram */
+}
+
+.social-button.facebook {
+    background-color: #1877F2; /* Facebook */
+}
+
+.social-button.tiktok {
+    background-color: #000000; /* TikTok */
+}
+
+.social-button.soundcloud {
+    background-color: #ff5500; /* SoundCloud */
+}
+
+/* Efecto hover para los botones */
+.social-button:hover {
+    background-color: #FFDD00; /* Fondo amarillo al pasar el ratón */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón */
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .social-buttons {
+        gap: 15px; /* Menor espacio entre los botones en pantallas pequeñas */
+    }
+
+    .social-button {
+        width: 50px; /* Botones más pequeños en pantallas pequeñas */
+        height: 50px; /* Botones más pequeños */
+        font-size: 20px; /* Iconos más pequeños */
+    }
+}
