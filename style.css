@@ -342,22 +342,11 @@ main {
 
 /* Estilos para los botones de redes sociales en esta sección */
 .social-buttons {
-    display: grid;                  /* Utiliza flexbox para alinearlos en fila */
-    justify-content: center;         /* Centra los botones horizontalmente */
-    gap: 80px;                       /* Aumenta el espacio entre los botones */
-    margin-top: 20px;                /* Espacio superior para separar los botones de los textos */
+    text-align: center;           /* Centra los elementos dentro del contenedor */
 }
-
-.social-btn {
-    width: 90px;                     /* Aumenta el tamaño de los botones */
-    height: 90px;
-    font-size: 35px;                 /* Aumenta el tamaño de los iconos */
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;              /* Mantiene los botones circulares */
-    background-color: #ffffff;
-    border: 2px solid transparent;
-    transition: background-color 0.3s ease, border 0.3s ease;
+.social-buttons > button {
+    display: inline-block;        /* Hace que cada botón se alinee en línea */
+    margin-right: 30px;            /* Controla el espacio entre los botones */
 }
 
 .social-btn a {
