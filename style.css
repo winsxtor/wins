@@ -344,17 +344,16 @@ main {
 .social-buttons {
     display: flex;                  /* Utiliza flexbox para alinearlos en fila */
     justify-content: center;         /* Centra los botones horizontalmente */
-    gap: 30px;                       /* Aumenta el espacio entre los botones */
+    gap: 50px;                       /* Aumenta el espacio entre los botones */
     margin-top: 20px;                /* Espacio superior para separar los botones de los textos */
 }
 
 .social-btn {
-    width: 60px;                     /* Aumenta el tamaño de los botones */
-    height: 60px;
+    width: 90px;                     /* Aumenta el tamaño de los botones */
+    height: 90px;
     font-size: 35px;                 /* Aumenta el tamaño de los iconos */
     display: flex;
     justify-content: center;
-    align-items: center;
     border-radius: 50%;              /* Mantiene los botones circulares */
     background-color: #ffffff;
     border: 2px solid transparent;
