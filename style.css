@@ -321,7 +321,7 @@ main {
 
 /* Estilo general para la sección de redes sociales */
 #social-media {
-    padding: 40px 20px;
+    padding: 40px 80px;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semitransparente */
     color: #ffffff;
     text-align: center;
@@ -341,7 +341,7 @@ main {
 /* Estilo para cada botón de red social */
 .social-button {
     font-size: 24px; /* Tamaño de los iconos */
-    padding: 15px;
+    padding: 30px;
     border-radius: 50%; /* Botones circulares */
     background-color: #333333; /* Fondo oscuro para los botones */
     color: #fff; /* Color de los iconos en blanco */
