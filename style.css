@@ -333,8 +333,8 @@ main {
 /* Contenedor para los botones de redes sociales */
 .social-buttons {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Espacio entre los botones */
+    justify-content:center;
+    gap: 40px; /* Espacio entre los botones */
     margin-top: 20px; /* Espacio superior de los botones */
 }
 
