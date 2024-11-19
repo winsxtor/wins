@@ -331,6 +331,7 @@ main {
 }
 
 /* Contenedor para los botones de redes sociales */
+    #social-media {
 .social-buttons {
     display: inline-block;
     margin: 0 auto;
@@ -339,6 +340,7 @@ main {
 }
 
 /* Estilo para cada botón de red social */
+        #social-media {
 .social-button {
     font-size: 24px; /* Tamaño de los iconos */
     padding: 30px;
@@ -355,18 +357,22 @@ main {
 }
 
 /* Colores específicos para cada red social */
+            #social-media {
 .social-button.instagram {
     background-color: #E4405F; /* Instagram */
 }
 
+                #social-media {
 .social-button.facebook {
     background-color: #1877F2; /* Facebook */
 }
 
+                    #social-media {
 .social-button.tiktok {
     background-color: #000000; /* TikTok */
 }
 
+                        #social-media {
 .social-button.soundcloud {
     background-color: #ff5500; /* SoundCloud */
 }
