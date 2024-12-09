@@ -338,43 +338,75 @@ main {
     margin-top: 20px; /* Espacio superior de los botones */
 }
 
-/* Estilo para cada botón de red social */
-.social-button {
-    font-size: 24px; /* Tamaño de los iconos */
-    padding: 30px;
-    border-radius: 50%; /* Botones circulares */
-    background-color: #333333; /* Fondo oscuro para los botones */
-    color: #fff; /* Color de los iconos en blanco */
-    text-decoration: none; /* Eliminamos subrayado */
-    display: inline-block;
+.social-buttons {
+    position: relative; 
+    top: 30px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde el borde izquierdo */
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    z-index: 10; /* Asegura que los botones queden por encima de otros elementos */
+}
+
+/* Estilo básico para los botones de redes sociales */
+.social-btn {
+    display: inline-flex; /* Alinea los iconos de las redes sociales */
     justify-content: center;
     align-items: center;
-    width: 60px; /* Ancho fijo */
-    height: 60px; /* Alto fijo */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    width: 30px; /* Ajusta el tamaño de los iconos */
+    height: 30px;
+    border-radius: 50%; /* Hace que los iconos sean circulares */
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+.social-btn a {
+    target: _blank; /* Abrir enlaces en nuevas pestañas */
 }
 
-/* Colores específicos para cada red social */
-.social-button.instagram {
-    background-color: #E4405F; /* Instagram */
+/* Iconos dentro de los botones */
+.social-btn i {
+    font-size: 18px;
+    color: inherit;
 }
 
-.social-button.facebook {
-    background-color: #1877F2; /* Facebook */
+/* Colores de cada red social */
+.instagram {
+    color: #E4405F;
 }
 
-.social-button.tiktok {
-    background-color: #000000; /* TikTok */
+.facebook {
+    color: #3b5998;
 }
 
-.social-button.soundcloud {
-    background-color: #ff5500; /* SoundCloud */
+.tiktok {
+    color: #000000;
+}
+
+.soundcloud {
+    color: #FF5500;
 }
 
 /* Efecto hover para los botones */
-.social-button:hover {
-    background-color: #FFDD00; /* Fondo amarillo al pasar el ratón */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón */
+.social-btn:hover {
+    opacity: 0.8;
+    border: 2px solid #fff;
+}
+
+/* Efecto hover con cambio de color de borde */
+.social-btn:hover.instagram {
+    border-color: #C13584;
+}
+
+.social-btn:hover.facebook {
+    border-color: #3b5998;
+}
+
+.social-btn:hover.tiktok {
+    border-color: #39b54a;
+}
+
+.social-btn:hover.soundcloud {
+    border-color: #ff2a00;
 }
 
 /* Estilos responsivos para pantallas más pequeñas */
