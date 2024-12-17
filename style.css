@@ -288,3 +288,16 @@ footer p {
 
     .galeria-grid { grid-template-columns: 1fr; }
 }
+/* Estilos para el mensaje de éxito */
+form h2 {
+    color: #552582; /* Morado para el mensaje de éxito */
+    font-size: 2em; /* Un tamaño de texto mayor para el título */
+    text-align: center; /* Centrado del texto */
+    margin-bottom: 10px; /* Espacio debajo */
+}
+
+form p {
+    color: #333; /* Texto más oscuro para el cuerpo */
+    font-size: 1.1em; /* Tamaño de texto legible */
+    text-align: center; /* Centrado del texto */
+}
