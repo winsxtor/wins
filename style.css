@@ -301,3 +301,18 @@ form p {
     font-size: 1.1em; /* Tamaño de texto legible */
     text-align: center; /* Centrado del texto */
 }
+/* Estilo para el logo */
+.logo {
+    max-width: 200px; /* Limita el tamaño máximo del logo */
+    width: 100%; /* Permite que el logo se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .logo {
+        width: 40%;   /* El logo ocupará el 40% del ancho en pantallas pequeñas */
+        max-width: 150px; /* Máximo 150px de ancho */
+        height: auto;     /* Mantiene la proporción */
+    }
+}
