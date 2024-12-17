@@ -301,3 +301,8 @@ form p {
     font-size: 1.1em; /* Tamaño de texto legible */
     text-align: center; /* Centrado del texto */
 }
+.logo {
+    display: block; /* Asegura que la imagen se muestre */
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
