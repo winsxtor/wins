@@ -128,6 +128,43 @@
 
 <script src="script.js"></script>
 
+<script>
+    // Obtener el formulario de contacto
+    const form = document.querySelector('form');
+    
+    // Escuchar el evento de envío del formulario
+    form.addEventListener('submit', function(event) {
+        // Prevenir el comportamiento predeterminado del formulario (no redirigir)
+        event.preventDefault();
+        
+        // Obtener los datos del formulario (si los necesitas)
+        const formData = new FormData(form);
+        
+        // Realizar la petición (puedes usar AJAX o un servicio como FormSubmit.co)
+        // Usaremos Fetch API para enviar el formulario a FormSubmit.co
+
+        fetch('https://formsubmit.co/contacto@winsdj.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            // Si la respuesta es exitosa, mostrar el mensaje de éxito
+            if (response.ok) {
+                // Cambiar el contenido del formulario a un mensaje de éxito
+                form.innerHTML = '<h2>¡Mensaje enviado con éxito!</h2><p>Gracias por ponerte en contacto. Te responderé lo antes posible.</p>';
+            } else {
+                // Si algo sale mal, mostrar un mensaje de error
+                form.innerHTML = '<h2>Oops, algo salió mal. Inténtalo de nuevo.</h2>';
+            }
+        })
+        .catch(error => {
+            // En caso de error de red o de otro tipo
+            form.innerHTML = '<h2>Oops, algo salió mal. Inténtalo de nuevo.</h2>';
+        });
+    });
+</script>
+
+
 </body>
 
 </html>
