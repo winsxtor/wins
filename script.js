@@ -39,3 +39,18 @@ footer {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
 }
+// JavaScript para manejar el popup en la galería
+document.querySelectorAll('.foto img').forEach(img => {
+    img.addEventListener('click', function() {
+        let popup = document.createElement('div');
+        popup.classList.add('popup');
+        popup.innerHTML = `
+            <img src="${this.src}" alt="${this.alt}">
+            <button class="close-popup">Cerrar</button>
+        `;
+        document.body.appendChild(popup);
+        document.querySelector('.close-popup').addEventListener('click', () => {
+            popup.remove();
+        });
+    });
+});
