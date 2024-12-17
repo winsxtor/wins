@@ -35,7 +35,7 @@
             <li><strong>2019:</strong> Toco en más de 10 ciudades y 3 países.</li>
             <li><strong>2021:</strong> Formo parte de DAWERXDAMPER.</li>
             <li><strong>2022:</strong> Gano premio al mejor DJ URBANO.</li>
-             <li><strong>2023:</strong> DAWERXDAMPER nominados al Latin Grammy.</li>
+            <li><strong>2023:</strong> DAWERXDAMPER nominados al Latin Grammy.</li>
         </ul>
     </section>
 
@@ -48,9 +48,9 @@
             <li>FLAVORLAND FEST (CALI) - 16 NOV</li>
             <li>SELINA (MEDELLIN) - 22 NOV</li>
             <li>SHAKE IT CLASSIC (YUMBO) - 30 NOV</li>
-             <li>AFROVICE (CALI) - 20 DIC</li>
+            <li>AFROVICE (CALI) - 20 DIC</li>
             <li>SHOW FIN DE AÑO (COSTEÑO BEACH) - 31 DIC</li>
-             <li>SELVAJE (TAYRONA) - 11 ENE 2025</li>
+            <li>SELVAJE (TAYRONA) - 11 ENE 2025</li>
         </ul>
     </section>
 
@@ -63,7 +63,6 @@
     <!-- Sección 5: Galería -->
     <section id="galeria">
         <h3>AQUI FOTOS MELAS, PORQUE EL QUE ES BONITO ES BONITO</h3>
-        <p></p>
         <div class="galeria-grid">
             <div class="foto">
                 <a href="FOTO COP1.jpg" target="_blank">
@@ -86,8 +85,7 @@
     <!-- Sección 7: Contacto -->
     <section id="contacto">
         <h3>DEJA TU MENSAJE, SOY TODO OIDOS.</h3>
-        <p></p>
-        <form action="https://formsubmit.co/contacto@winsdj.com" method="POST">
+        <form id="contactForm">
             <label for="name">Nombre</label>
             <input type="text" id="name" name="name" required>
 
@@ -99,6 +97,8 @@
 
             <button type="submit">Enviar</button>
         </form>
+
+        <div id="responseMessage"></div> <!-- Aquí se mostrará el mensaje de éxito -->
     </section>
 
     <!-- Sección 8: Redes Sociales -->
@@ -126,23 +126,6 @@
     <p>&copy; 2024 WINS THE DEEJAAY. Todos los derechos reservados.</p>
 </footer>
 
-<script src="script.js"></script>
-
-<form id="contactForm">
-    <label for="name">Nombre</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Correo Electrónico</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Mensaje</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-
-    <button type="submit">Enviar</button>
-</form>
-
-<div id="responseMessage"></div> <!-- Aquí se mostrará el mensaje de éxito -->
-
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();  // Evitar la redirección
@@ -164,6 +147,7 @@
         .then(response => response.json())
         .then(data => {
             document.getElementById('responseMessage').innerHTML = '<h2>¡Mensaje enviado con éxito!</h2><p>Gracias por ponerte en contacto. Te responderé lo antes posible.</p>';
+            document.getElementById('contactForm').reset();  // Limpiar el formulario
         })
         .catch(error => {
             document.getElementById('responseMessage').innerHTML = '<h2>Oops, algo salió mal. Inténtalo de nuevo.</h2>';
@@ -171,7 +155,6 @@
         });
     });
 </script>
-
 
 </body>
 
