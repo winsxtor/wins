@@ -316,3 +316,7 @@ form p {
         height: auto;     /* Mantiene la proporción */
     }
 }
+.foto img:focus {
+    outline: none;
+    border: none;
+}
