@@ -294,3 +294,6 @@ form p {
         height: auto;     /* Mantiene la proporción */
     }
 }
+.galeria-grid img {
+    border: none !important;
+}
