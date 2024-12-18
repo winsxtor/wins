@@ -16,7 +16,7 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    text-align: center;
+    text-align: center; /* Aseguramos que el contenido del header esté centrado */
     position: relative;
 }
 
@@ -24,6 +24,7 @@ header h1 {
     font-size: 2.5em;
     margin: 0;
     color: #fff;
+    text-align: center;  /* Aseguramos que el h1 esté centrado */
 }
 
 nav ul {
@@ -59,12 +60,13 @@ nav a {
     line-height: 1.8;
     background-color: rgba(255, 140, 0, 0.6);
     color: #ffffff;
-    text-align: center;
+    text-align: center;  /* Aseguramos que todo el texto dentro de events esté centrado */
 }
 
 .events h3 {
     font-size: 2em;
     margin-bottom: 20px;
+    text-align: center;  /* Centramos los subtítulos dentro de .events */
 }
 
 .events ul {
@@ -98,12 +100,13 @@ nav a {
     padding: 40px 20px;
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
-    text-align: center;
+    text-align: center;  /* Centramos todo el contenido en la sección de contacto */
 }
 
 #contacto h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    text-align: center;  /* Aseguramos que el h2 esté centrado */
 }
 
 #contacto p {
@@ -266,34 +269,6 @@ footer p {
     .galeria-grid { grid-template-columns: 1fr; }
 }
 
-/* Estilos para el mensaje de éxito */
-form h2 {
-    color: #552582; /* Morado para el mensaje de éxito */
-    font-size: 2em; /* Un tamaño de texto mayor para el título */
-    text-align: center; /* Centrado del texto */
-    margin-bottom: 10px; /* Espacio debajo */
-}
-
-form p {
-    color: #333; /* Texto más oscuro para el cuerpo */
-    font-size: 1.1em; /* Tamaño de texto legible */
-    text-align: center; /* Centrado del texto */
-}
-/* Estilo para el logo */
-.logo {
-    max-width: 200px; /* Limita el tamaño máximo del logo */
-    width: 100%; /* Permite que el logo se ajuste al contenedor */
-    height: auto; /* Mantiene la proporción */
-}
-
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
-    .logo {
-        width: 40%;   /* El logo ocupará el 40% del ancho en pantallas pequeñas */
-        max-width: 150px; /* Máximo 150px de ancho */
-        height: auto;     /* Mantiene la proporción */
-    }
-}
 .galeria-grid img {
     border: none !important;
 }
