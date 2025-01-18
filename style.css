@@ -10,21 +10,40 @@ body {
     background-position: center;
     background-attachment: fixed;
     line-height: 1.6;
-    text-align: justify;  /* Justifica el texto en todo el cuerpo */
+    text-align: justify;  /* Justifica el texto de todo el cuerpo */
 }
 
 /* Header styles */
 header {
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.7); /* Cambio: Asegura que el header tenga fondo oscuro */
     padding: 20px;
     text-align: center; /* Centrado del texto en el header */
-    position: relative;
+    position: relative; /* Necesario para los elementos de la navegación */
 }
 
 header h1 {
     font-size: 2.5em;
     margin: 0;
-    color: #fff;
+    color: #fff; /* Color blanco para el título */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 /* Hero section styling */
@@ -40,7 +59,7 @@ header h1 {
     font-family: 'Public Sans', sans-serif;
     font-size: 13.5px;
     line-height: 1.8;
-    background-color: rgba(255, 140, 0, 0.6);
+    background-color: rgba(255, 140, 0, 0.6); /* Mejor fondo con opacidad */
     color: #ffffff;
     text-align: justify;  /* Justifica el texto en la sección de eventos */
 }
@@ -96,6 +115,52 @@ header h1 {
     margin-bottom: 30px;
     color: #ccc;
     text-align: justify;  /* Justifica el texto en la sección de contacto */
+}
+
+form {
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin: 0 auto;
+    border: 1.7px solid #FFDD00;
+}
+
+form label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #222;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #552582;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #3e1e6a;
 }
 
 /* Footer styles */
@@ -231,31 +296,31 @@ footer p {
 
 /* Estilos para el mensaje de éxito */
 form h2 {
-    color: #552582; 
-    font-size: 2em; 
-    text-align: center; 
-    margin-bottom: 10px;
+    color: #552582; /* Morado para el mensaje de éxito */
+    font-size: 2em; /* Un tamaño de texto mayor para el título */
+    text-align: center; /* Centrado del texto */
+    margin-bottom: 10px; /* Espacio debajo */
 }
 
 form p {
-    color: #333; 
-    font-size: 1.1em; 
-    text-align: center; 
+    color: #333; /* Texto más oscuro para el cuerpo */
+    font-size: 1.1em; /* Tamaño de texto legible */
+    text-align: center; /* Centrado del texto */
 }
 
 /* Estilo para el logo */
 .logo {
-    max-width: 200px; 
-    width: 100%; 
-    height: auto;
+    max-width: 200px; /* Limita el tamaño máximo del logo */
+    width: 100%; /* Permite que el logo se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción */
 }
 
 /* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
     .logo {
-        width: 40%;
-        max-width: 150px;
-        height: auto;
+        width: 40%;   /* El logo ocupará el 40% del ancho en pantallas pequeñas */
+        max-width: 150px; /* Máximo 150px de ancho */
+        height: auto;     /* Mantiene la proporción */
     }
 }
 
