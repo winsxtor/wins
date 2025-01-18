@@ -10,14 +10,14 @@ body {
     background-position: center;
     background-attachment: fixed;
     line-height: 1.6;
-    text-align: justify;  /* Justifica el texto de todo el cuerpo */
+    text-align: justify;  /* Justificar todo el texto en el body */
 }
 
 /* Header styles */
 header {
     background-color: rgba(0, 0, 0, 0.7); /* Cambio: Asegura que el header tenga fondo oscuro */
     padding: 20px;
-    text-align: center; /* Centrado del texto en el header */
+    text-align: center; /* Centrado de texto en el header */
     position: relative; /* Necesario para los elementos de la navegación */
 }
 
