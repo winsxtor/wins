@@ -328,3 +328,44 @@ form p {
     outline: none;
     border: none;
 }
+/* Estilos para la sección About */
+#about {
+    padding: 60px 20px;
+    background-color: #1a1a1a; /* Fondo oscuro o lo que desees */
+    color: #ffffff;  /* Texto blanco */
+    text-align: center; /* Centramos el texto dentro de la sección */
+}
+
+.about-container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad para destacar el texto */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.about-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFDD00; /* Un color amarillo para el título */
+}
+
+.about-container p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #ccc;  /* Color gris para el texto */
+}
+@media (max-width: 768px) {
+    .about-container {
+        width: 90%; /* El contenedor ocupa el 90% del ancho en pantallas más pequeñas */
+        padding: 15px; /* Menos relleno */
+    }
+
+    .about-container h2 {
+        font-size: 2em; /* Reduce el tamaño del título */
+    }
+
+    .about-container p {
+        font-size: 1em; /* Ajusta el tamaño del texto */
+    }
+}
