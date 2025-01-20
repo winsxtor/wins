@@ -346,7 +346,7 @@ form p {
 }
 
 .about-container h2 {
-    font-size: 2.0em;
+    font-size: 1.7em;
     margin-bottom: 20px;
     color: #ccc; /* Un color gris para el título */
 }
@@ -363,7 +363,7 @@ form p {
     }
 
     .about-container h2 {
-        font-size: 2em; /* Reduce el tamaño del título */
+        font-size: 1.5em; /* Reduce el tamaño del título */
     }
 
     .about-container p {
@@ -391,7 +391,7 @@ form p {
 }
 
 #trayectoria h3 {
-    font-size: 2.0em;
+    font-size: 1.7em;
     color: #ccc; 
     margin-bottom: 20px;
     text-align: center;
@@ -422,7 +422,7 @@ form p {
 }
 
 #tour h3 {
-    font-size: 2.0em;
+    font-size: 1.7em;
     margin-bottom: 20px;
     text-align: center;
     color: #fff; /* Título en blanco */
@@ -446,7 +446,7 @@ form p {
     }
 
     #trayectoria h3, #tour h3 {
-        font-size: 2em; /* Reducimos el tamaño de los títulos */
+        font-size: 1.5em; /* Reducimos el tamaño de los títulos */
     }
 
     #trayectoria ul li, #tour ul li {
