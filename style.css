@@ -347,7 +347,7 @@ form p {
 .about-container h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #FFDD00; /* Un color amarillo para el título */
+    color: #ccc; /* Un color amarillo para el título */
 }
 
 .about-container p {
