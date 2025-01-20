@@ -124,7 +124,8 @@ form {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     width: 50%;
     margin: 0 auto;
-    border: 1.7px solid #FFDD00;
+    border: 1.7px solid rgba(169, 169, 169, 0.6);
+;
 }
 
 form label {
