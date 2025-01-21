@@ -3,9 +3,9 @@ body {
     font-family: 'Public Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
+    background-color: #ffffff;
     color: #ffffff;
-    background-image: url('sultana2016.jpg'); /* Cambio: tu imagen de fondo */
+    background-image: url('LogoWINS.png'); /* Cambio: tu imagen de fondo */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
