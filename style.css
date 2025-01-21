@@ -379,7 +379,7 @@ form p {
 
 /* Estilos para la Sección Trayectoria */
 #trayectoria {
-    background-color: #222; /* Fondo oscuro para resaltar el contenido */
+    background-color: #000000; /* Fondo oscuro para resaltar el contenido */
     color: #ffffff;  /* Texto blanco */
     padding: 60px 20px; /* Espaciado alrededor */
 }
@@ -392,7 +392,7 @@ form p {
 
 #trayectoria h3 {
     font-size: 1.7em;
-    color: #ccc; 
+    color: #fff; 
     margin-bottom: 20px;
     text-align: center;
 }
@@ -410,8 +410,8 @@ form p {
 
 /* Estilos para la Sección Tour */
 #tour {
-    background-color: #1a1a1a; /* Fondo oscuro */
-    color: #ccc; /* Texto blanco */
+    background-color: #fff; /* Fondo blanco */
+    color: #000000; /* Texto negro*/
     padding: 60px 20px;
 }
 
@@ -425,7 +425,7 @@ form p {
     font-size: 1.7em;
     margin-bottom: 20px;
     text-align: center;
-    color: #fff; /* Título en blanco */
+    color: #000000; /* Título en blanco */
 }
 
 #tour ul {
