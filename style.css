@@ -341,20 +341,20 @@ form p {
     max-width: 800px; /* Ancho máximo del contenedor */
     margin: 0 auto; /* Centrado horizontal */
     padding: 20px; /* Espaciado interno */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad para destacar el texto */
+    background-color: #ffffff; /* Fondo oscuro con opacidad para destacar el texto */
     border-radius: 8px; /* Bordes redondeados */
 }
 
 .about-container h2 {
     font-size: 1.7em;
     margin-bottom: 20px;
-    color: #ccc; /* Un color gris para el título */
+    color: #000000; /* Un color gris para el título */
 }
 
 .about-container p {
     font-size: 1.2em;
     line-height: 1.8;
-    color: #ccc;  /* Color gris para el texto */
+    color: #000000;  /* Color gris para el texto */
 }
 @media (max-width: 768px) {
     .about-container {
