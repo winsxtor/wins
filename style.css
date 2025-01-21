@@ -332,8 +332,8 @@ form p {
 /* Estilos para la sección About */
 #about {
     padding: 60px 20px;
-    background-color: #1a1a1a; /* Fondo oscuro o lo que desees */
-    color: #ffffff;  /* Texto blanco */
+    background-color: #ffffff; /* Fondo oscuro o lo que desees */
+    color: #000000;  /* Texto blanco */
     text-align: center; /* Centramos el texto dentro de la sección */
 }
 
