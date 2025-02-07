@@ -461,13 +461,12 @@ form p {
         font-size: 1em; /* Reducimos el tamaño del texto en las listas */
     }
 }
-/* Sección 1: About */
 #about {
-    background-image: url('FONDOBLN.png'); /* Imagen para la sección About */
-    background-size: cover;
-    background-position: center;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));  /* Gradiente radial de negro a blanco */
+    padding: 50px;  /* Espacio alrededor del contenido */
+    color: white;  /* Texto blanco para mayor visibilidad */
+    text-align: center;  /* Asegura que el texto esté centrado (opcional) */
 }
-
 
 /* Sección 4: SoundCloud */
 #soundcloud {
