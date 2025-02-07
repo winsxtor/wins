@@ -453,3 +453,51 @@ form p {
         font-size: 1em; /* Reducimos el tamaño del texto en las listas */
     }
 }
+/* Sección 1: About */
+#about {
+    background-image: url('images/FONDOWEB.png'); /* Ruta de la imagen para la sección About */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sección 2: Trayectoria */
+#trayectoria {
+    background-image: url('images/FONDOWEBNEG.png'); /* Ruta de la imagen para la sección Trayectoria */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sección 3: Tour */
+#tour {
+    background-image: url('images/FONDOWEB.png'); /* Ruta de la imagen para la sección Tour */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sección 4: SoundCloud */
+#soundcloud {
+    background-image: url('images/FONDOWEBNEG.png'); /* Ruta de la imagen para la sección SoundCloud */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sección 5: Galería */
+#galeria {
+    background-image: url('images/FONDOWEBNEG.png'); /* Ruta de la imagen para la sección Galería */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sección 7: Contacto */
+#contacto {
+    background-image: url('images/FONDOWEBNEG.png'); /* Ruta de la imagen para la sección Contacto */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sección 8: Redes Sociales */
+#social-media {
+    background-image: url('images/FONDOWEB.png'); /* Ruta de la imagen para la sección Redes Sociales */
+    background-size: cover;
+    background-position: center;
+}
