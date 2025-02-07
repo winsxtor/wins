@@ -470,16 +470,14 @@ form p {
 
 /* Sección 4: SoundCloud */
 #soundcloud {
-    background-image: url('FONDOWEBNEG.png'); /* Imagen para la sección SoundCloud */
-    background-size: cover;
-    background-position: center;
+     background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));  /* Gradiente radial de negro a blanco */
+    padding: 50px;  /* Espacio alrededor del contenido */
 
 }
 
 /* Sección 7: Contacto */
 #contacto {
-    background-image: url('FONDOWEBNEG.png'); /* Imagen para la sección Contacto */
-    background-size: cover;
-    background-position: center;
+     background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));  /* Gradiente radial de negro a blanco */
+    padding: 50px;  /* Espacio alrededor del contenido */
 }
 
