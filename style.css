@@ -460,32 +460,13 @@ form p {
     background-position: center;
 }
 
-/* Sección 2: Trayectoria */
-#trayectoria {
-    background-image: url('FONDOWEBNEG.png'); /* Imagen para la sección Trayectoria */
-    background-size: cover;
-    background-position: center;
-}
-
-/* Sección 3: Tour */
-#tour {
-    background-image: url('FONDOWEB.png'); /* Imagen para la sección Tour */
-    background-size: cover;
-    background-position: center;
-}
 
 /* Sección 4: SoundCloud */
 #soundcloud {
     background-image: url('FONDOWEBNEG.png'); /* Imagen para la sección SoundCloud */
     background-size: cover;
     background-position: center;
-}
 
-/* Sección 5: Galería */
-#galeria {
-    background-image: url('FONDOWEBNEG.png'); /* Imagen para la sección Galería */
-    background-size: cover;
-    background-position: center;
 }
 
 /* Sección 7: Contacto */
@@ -495,9 +476,3 @@ form p {
     background-position: center;
 }
 
-/* Sección 8: Redes Sociales */
-#social-media {
-    background-image: url('FONDOWEB.png'); /* Imagen para la sección Redes Sociales */
-    background-size: cover;
-    background-position: center;
-}
