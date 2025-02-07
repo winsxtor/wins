@@ -15,10 +15,18 @@ body {
 
 /* Header styles */
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Cambio: Asegura que el header tenga fondo oscuro */
-    padding: 20px;
-    text-align: center; /* Centrado de texto en el header */
-    position: relative; /* Necesario para los elementos de la navegación */
+    background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1)); /* Gradiente radial de negro a blanco */
+    padding: 20px;  /* Ajusta el padding a tu preferencia */
+    color: white;  /* Para que el texto del header sea blanco y visible */
+    text-align: center;  /* Si quieres centrar el texto del header */
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.logo {
+    width: 150px;  /* Ajusta el tamaño del logo según necesites */
 }
 
 header h1 {
