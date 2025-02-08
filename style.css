@@ -476,7 +476,7 @@ background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));  
 }
 
 #contacto {
-    background-image: url('FONDOLOOP.png');  /* Apunta a la imagen en tu directorio raíz */
+    background-image: url('FONDO2.png');  /* Apunta a la imagen en tu directorio raíz */
     background-size: cover;  /* Asegura que la imagen cubra toda la sección */
     background-position: center center;  /* Centra la imagen */
     padding: 50px;  /* Ajusta el padding para la sección */
