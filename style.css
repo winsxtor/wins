@@ -469,4 +469,9 @@ form p {
     padding: 50px;  /* Ajusta el padding para la sección */
     color: white;  /* Asegura que el texto sea visible */
 }
+#about {
+    background-color: #000000;  /* Fondo negro sólido */
+    padding: 50px;
+    color: white;  /* Asegura que el texto sea blanco y legible */
+}
 
