@@ -15,7 +15,7 @@ body {
 
 /* Header styles */
 header {
-    background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1)); /* Gradiente radial de negro a blanco */
+    background: rgba(0, 0, 0, 1),
     padding: 20px;  /* Ajusta el padding a tu preferencia */
     color: white;  /* Para que el texto del header sea blanco y visible */
     text-align: center;  /* Si quieres centrar el texto del header */
