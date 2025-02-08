@@ -463,11 +463,9 @@ form p {
 }
 
 #contacto {
-    background-image: url('FONDO1.png');  /* Apunta a la imagen en tu directorio raíz */
-    background-size: cover;  /* Asegura que la imagen cubra toda la sección */
-    background-position: center center;  /* Centra la imagen */
-    padding: 50px;  /* Ajusta el padding para la sección */
-    color: white;  /* Asegura que el texto sea visible */
+    background-color: #000000;  /* Fondo negro sólido */
+    padding: 50px;
+    color: white;  /* Asegura que el texto sea blanco y legible */
 }
 #about {
     background-color: #000000;  /* Fondo negro sólido */
