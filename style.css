@@ -461,22 +461,9 @@ form p {
         font-size: 1em; /* Reducimos el tamaño del texto en las listas */
     }
 }
-#about {
-   background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));  /* Negro intenso y puro en el centro */
-    padding: 50px; /* Espacio alrededor del contenido */
-    color: white;  /* Texto blanco para mayor visibilidad */
-    text-align: center;  /* Asegura que el texto esté centrado (opcional) */
-}
-
-/* Sección 4: SoundCloud */
-#soundcloud {
-background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));  /* Negro intenso y puro en el centro */
-    padding: 50px;
-
-}
 
 #contacto {
-    background-image: url('FONDO2.png');  /* Apunta a la imagen en tu directorio raíz */
+    background-image: url('FONDO1.png');  /* Apunta a la imagen en tu directorio raíz */
     background-size: cover;  /* Asegura que la imagen cubra toda la sección */
     background-position: center center;  /* Centra la imagen */
     padding: 50px;  /* Ajusta el padding para la sección */
