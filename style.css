@@ -490,15 +490,27 @@ form p {
 #youtube {
     padding: 20px;
     text-align: center;
-    background-color: #000000;
+    background-color: #000000;  /* Fondo negro sólido */
     margin: 20px 0;
     border-radius: 8px;
 }
 
-#youtube iframe {
-    border-radius: 8px;
+/* Estilo para la imagen de YouTube */
+#youtube img {
     width: 100%;
-    max-width: 800px;
-    height: 315px; /* Ajustado para el tamaño del video de YouTube */
+    max-width: 800px; /* Ajusta el tamaño máximo */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    cursor: pointer;  /* Cambia el cursor para indicar que es clickeable */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #youtube {
+        padding: 15px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    #youtube img {
+        max-width: 100%; /* La imagen ocupará el 100% del ancho disponible */
+    }
 }
 
