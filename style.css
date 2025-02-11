@@ -476,14 +476,14 @@ form p {
 #soundcloud h3 {
     text-align: center; /* Centra el texto */
     color: white; /* Asegura que el color del texto sea blanco para visibilidad */
-    font-size: 1,7em; /* Ajusta el tamaño de la fuente según prefieras */
+    font-size: 2em; /* Ajusta el tamaño de la fuente según prefieras */
     margin-bottom: 20px; /* Añade espacio debajo del título */
 }
 /* Centrar el texto h3 dentro de la sección Galería */
 #galeria h3 {
     text-align: center; /* Centra el texto */
     color: white; /* Asegura que el texto sea blanco para visibilidad */
-    font-size: 1,7em; /* Ajusta el tamaño de la fuente según prefieras */
+    font-size: 2em; /* Ajusta el tamaño de la fuente según prefieras */
     margin-bottom: 20px; /* Añade espacio debajo del título */
 }
 /* Sección de Video de YouTube */
