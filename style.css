@@ -514,3 +514,7 @@ form p {
     }
 }
 
+.logo-video {
+    width: 100%; /* Ajusta el tamaño del video al 100% del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+}
