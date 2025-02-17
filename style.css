@@ -415,7 +415,19 @@ form p {
     margin-bottom: 15px; /* Espaciado entre los elementos de la lista */
     line-height: 1.8; /* Espaciado entre las líneas */
 }
+#trayectoria ul {
+    list-style-type: disc; /* Cambia el estilo de la lista a bullets */
+    padding-left: 20px; /* Añade espacio a la izquierda de la lista */
+}
 
+#trayectoria ul li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    list-style-position: inside; /* Posiciona los bullets dentro del contenedor de la lista */
+    border-bottom: 1px solid #ffffff; /* Línea blanca delgada */
+    padding-bottom: 10px; /* Espacio debajo de cada entrada */
+}
 /* Estilos para la Sección Tour */
 #tour {
     background-color: #fff; /* Fondo blanco */
