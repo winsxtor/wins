@@ -21,7 +21,7 @@
         }
     </style>   
     <!-- Video en lugar de logo -->
-    <video autoplay loop muted playsinline class="logo-video" onplay="this.play(); this.controls=false;">
+    <video autoplay loop muted playsinline class="logo-video" onplay="this.controls=false;">
         <source src="LOGOANIMADOWINS.mp4" type="video/mp4">
         Tu navegador no soporta el elemento de video.
     </video>
@@ -32,7 +32,7 @@
     <section id="about">
         <div class="about-container">
         <h2>Vení, te cuento quien soy</h2>
-        <p>DJ y Beatmaker desde 2012. Inicié mi carrera como Wins Selectah y ahora me hago conocer como WINS. Mi estilo fusiona géneros como Dancehall, Reggaetón, Salsa y Hip Hop, con World Music c[...]
+        <p>DJ y Beatmaker desde 2012. Inicié mi carrera como Wins Selectah y ahora me hago conocer como WINS. Mi estilo fusiona géneros como Dancehall, Reggaetón, Salsa y Hip Hop, con World Music como Currulao, Chirimía, Soca, Afrobeat, Amapiano, entre otros. Esto me ha permitido participar en festivales y tocar en diferentes países..</p>
     </section>
 
   <!-- Sección 2: Trayectoria TimeLine -->
@@ -179,16 +179,6 @@
             document.getElementById('responseMessage').innerHTML = '<h2>Oops, algo salió mal. Inténtalo de nuevo.</h2>';
             console.error('Error:', error);
         });
-    });
-
-    // Asegurarse de que el video no pueda ser pausado
-    document.querySelector('.logo-video').addEventListener('play', function(event) {
-        event.target.controls = false;
-        event.target.loop = true;
-    });
-
-    document.querySelector('.logo-video').addEventListener('pause', function(event) {
-        event.target.play();
     });
 </script>
 
