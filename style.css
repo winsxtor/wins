@@ -460,7 +460,7 @@ form p {
 }
 
 #tour ul li {
-    border-bottom: 4px solid #000000; /* Línea gruesa continua de color negro */
+    border-bottom: 2px solid #000000; /* Línea gruesa continua de color negro */
     padding-bottom: 10px; /* Espacio debajo de cada entrada */
     margin-bottom: 10px; /* Espacio entre las entradas */
 }
