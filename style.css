@@ -447,6 +447,12 @@ form p {
     line-height: 1.8; /* Espaciado entre las líneas */
 }
 
+#tour ul li {
+    border-bottom: 4px solid #000000; /* Línea gruesa continua de color negro */
+    padding-bottom: 10px; /* Espacio debajo de cada entrada */
+    margin-bottom: 10px; /* Espacio entre las entradas */
+}
+
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
     .container {
