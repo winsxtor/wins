@@ -55,10 +55,15 @@ nav a {
 }
 
 /* Hero section styling */
-.hero {
+  .hero {
     padding: 60px 60px;
-    text-align: center; /* Centrado de texto en la sección hero */
-    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Si quieres que el fondo tenga un overlay oscuro */
+    background-image: url('MOSAICO WEB.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 }
 
 /* Events section styling */
