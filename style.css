@@ -490,7 +490,7 @@ form p {
     background-color: #000000;  /* Fondo negro sólido */
     padding: 50px;
     color: white;  /* Asegura que el texto sea blanco y legible */
-    background-image: url('MOSAICO WEB.png');
+    background-image: url
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
