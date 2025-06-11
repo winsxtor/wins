@@ -342,7 +342,7 @@ form p {
 #about {
     padding: 60px 20px;
     background-color: #ffffff; /* Fondo oscuro o lo que desees */
-    color: #000000;  /* Texto blanco */
+    color: #000000;  /* Texto negro */
     text-align: center; /* Centramos el texto dentro de la sección */
 }
 
@@ -357,13 +357,13 @@ form p {
 .about-container h2 {
     font-size: 1.7em;
     margin-bottom: 20px;
-    color: #000000; /* Un color gris para el título */
+    color: #000000; /* Un color negro para el título */
 }
 
 .about-container p {
     font-size: 1.2em;
     line-height: 1.8;
-    color: #000000;  /* Color gris para el texto */
+    color: #000000;  /* Color negro para el texto */
 }
 @media (max-width: 768px) {
     .about-container {
