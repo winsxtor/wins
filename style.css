@@ -20,10 +20,7 @@ header {
     color: white;  /* Para que el texto del header sea blanco y visible */
     text-align: center;  /* Si quieres centrar el texto del header */
 }
-header,
 #about,
-#tour,
-#galeria,
 #youtube {
   background-image: url('FONDOWEB1.png');
   background-size: cover;
