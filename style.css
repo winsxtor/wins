@@ -20,7 +20,16 @@ header {
     color: white;  /* Para que el texto del header sea blanco y visible */
     text-align: center;  /* Si quieres centrar el texto del header */
 }
-
+header,
+#about,
+#tour,
+#galeria,
+#youtube {
+  background-image: url('FONDOWEB1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .logo-link {
     display: inline-block;
 }
@@ -391,10 +400,7 @@ form p {
     background-color: #000000; /* Fondo oscuro para resaltar el contenido */
     color: #ffffff;  /* Texto blanco */
     padding: 60px 20px; /* Espaciado alrededor */
-    padding: 60px 20px;background-image: url('FONDOWEB1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+   
 }
 
 #trayectoria .container {
@@ -494,10 +500,7 @@ form p {
     background-color: #000000;  /* Fondo negro sólido */
     padding: 50px;
     color: white;  /* Asegura que el texto sea blanco y legible */
-    background-image: url('FONDOWEB1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+   
 }
 /* Centrar el texto h3 dentro de la sección SoundCloud */
 #soundcloud h3 {
