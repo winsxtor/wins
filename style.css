@@ -391,6 +391,10 @@ form p {
     background-color: #000000; /* Fondo oscuro para resaltar el contenido */
     color: #ffffff;  /* Texto blanco */
     padding: 60px 20px; /* Espaciado alrededor */
+    padding: 60px 20px;background-image: url('FONDOWEB1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #trayectoria .container {
@@ -433,7 +437,7 @@ form p {
 #tour {
     background-color: #fff; /* Fondo blanco */
     color: #000000; /* Texto negro*/
-    padding: 60px 20px;
+    
 }
 
 #tour .container {
