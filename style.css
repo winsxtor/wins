@@ -490,7 +490,7 @@ form p {
     background-color: #000000;  /* Fondo negro sólido */
     padding: 50px;
     color: white;  /* Asegura que el texto sea blanco y legible */
-    background-image: url
+    background-image: url('FONDOWEB1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
