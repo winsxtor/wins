@@ -590,3 +590,41 @@ footer ul li a {
 footer ul li a:hover {
     text-decoration: underline;
 }
+@media (max-width: 768px) {
+  #trayectoria,
+  #tour {
+    padding: 25px 5px !important;
+  }
+  #trayectoria .container,
+  #tour .container {
+    padding: 10px !important;
+  }
+  #trayectoria h3,
+  #tour h3 {
+    font-size: 1.1em !important;
+    margin-bottom: 10px !important;
+  }
+  #trayectoria ul,
+  #tour ul {
+    padding-left: 10px !important;
+  }
+  #trayectoria ul li,
+  #tour ul li {
+    font-size: 0.95em !important;
+    margin-bottom: 8px !important;
+    line-height: 1.4 !important;
+    padding-bottom: 6px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #trayectoria h3,
+  #tour h3 {
+    font-size: 1em !important;
+  }
+  #trayectoria ul li,
+  #tour ul li {
+    font-size: 0.85em !important;
+    border-bottom: none !important;
+  }
+}
