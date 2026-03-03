@@ -119,7 +119,7 @@ body.panel-open {
 }
 
 /* =================================
-   PANELS (Nueva lógica sin display:none)
+   PANELS
 ================================= */
 .panel {
   position: fixed;
@@ -131,13 +131,11 @@ body.panel-open {
   backdrop-filter: blur(12px);
   z-index: 1000;
 
-  /* Estado oculto */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
 }
 
-/* Estado visible */
 .panel.show {
   opacity: 1;
   pointer-events: auto;
@@ -155,7 +153,6 @@ body.panel-open {
   border: 1px solid rgba(255,255,255,0.1);
   position: relative;
 
-  /* Animación sutil */
   transform: translateY(20px);
   transition: transform 0.4s ease;
 }
@@ -181,6 +178,22 @@ body.panel-open {
 
 .panel-content ul {
   list-style: none;
+}
+
+/* 🔥 Links estilo booking SOLO dentro de paneles */
+.panel-content a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  transition: opacity 0.3s ease;
+}
+
+.panel-content a:hover {
+  opacity: 0.7;
+}
+
+.panel-content a:visited {
+  color: #fff;
 }
 
 .close-button {
@@ -278,42 +291,4 @@ body.panel-open {
   .socials {
     bottom: 150px;
   }
-   
-   /* Links dentro de paneles (bio) */
-.panel-content a {
-  color: inherit;          /* usa el color del texto normal */
-  text-decoration: underline;
-}
-
-.panel-content a:visited {
-  color: inherit;          /* evita que se pongan morados */
-}
-
-.panel-content a:hover {
-  opacity: 0.8;            /* efecto sutil al pasar el mouse */
-}
-   
-/* Footer en una sola línea */
-.site-footer .footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: nowrap;
-  text-align: center;
-}
-
-.site-footer .footer-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.site-footer .footer-links li {
-  display: inline;
-}
-
-.site-footer .footer-links a {
-  text-decoration: none;
-}
 }
