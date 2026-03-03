@@ -1,294 +1,79 @@
-/* =================================
-   FONTS
-================================= */
-@import url('https://api.fontshare.com/v2/css?f[]=general-sans@600&f[]=bricolage-grotesque@400,800&display=swap');
+const buttons = document.querySelectorAll('.buttons button');
+const panels = document.querySelectorAll('.panel');
+const body = document.body;
 
-/* =================================
-   RESET
-================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+// ==============================
+// CERRAR TODO
+// ==============================
+function closeAllPanels() {
+  buttons.forEach(btn => btn.classList.remove('active'));
+  panels.forEach(panel => panel.classList.remove('show'));
+  body.classList.remove('panel-open');
 }
 
-body {
-  background: #000;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  color: #fff;
-  overflow-x: hidden;
+// ==============================
+// ABRIR PANEL
+// ==============================
+function openPanel(targetId, button) {
+  const panel = document.getElementById(targetId);
+  if (!panel) return;
+
+  closeAllPanels();
+
+  panel.classList.add('show');
+  button.classList.add('active');
+  body.classList.add('panel-open');
 }
 
-/* Scroll lock cuando panel está abierto */
-body.panel-open {
-  overflow: hidden;
-}
+// ==============================
+// EVENTOS BOTONES
+// ==============================
+buttons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-/* =================================
-   VIDEO
-================================= */
-.video-container {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-}
+    const targetId = button.dataset.panel;
+    const targetPanel = document.getElementById(targetId);
 
-.video-container video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    if (targetPanel.classList.contains('show')) {
+      closeAllPanels();
+    } else {
+      openPanel(targetId, button);
+    }
+  });
+});
 
-/* =================================
-   OVERLAY
-================================= */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
-  z-index: 10;
-}
+// ==============================
+// CERRAR POR FONDO O X
+// ==============================
+panels.forEach(panel => {
+  const content = panel.querySelector('.panel-content');
+  const closeBtn = panel.querySelector('.close-button');
 
-/* =================================
-   SOCIALS
-================================= */
-.socials {
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 15px;
-  z-index: 30;
-}
+  // Cerrar si clic fondo
+  panel.addEventListener('click', (e) => {
+    if (e.target === panel) closeAllPanels();
+  });
 
-.socials a {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
-  text-decoration: none;
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-}
-
-.socials a:hover {
-  background: #fff;
-  color: #000;
-  transform: translateY(-3px);
-}
-
-/* =================================
-   BUTTONS
-================================= */
-.buttons {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 15px;
-  z-index: 20;
-}
-
-.buttons button {
-  font-family: 'General Sans', sans-serif;
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 12px 24px;
-  border-radius: 50px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.buttons button:hover,
-.buttons button.active {
-  background: #fff;
-  color: #000;
-}
-
-/* =================================
-   PANELS
-================================= */
-.panel {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-.panel.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* =================================
-   PANEL CONTENT
-================================= */
-.panel-content {
-  width: 90%;
-  max-width: 700px;
-  padding: 40px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  position: relative;
-
-  transform: translateY(20px);
-  transition: transform 0.4s ease;
-}
-
-.panel.show .panel-content {
-  transform: translateY(0);
-}
-
-.panel-content h2 {
-  font-family: 'General Sans', sans-serif;
-  font-weight: 600;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-}
-
-.panel-content p,
-.panel-content ul li {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.panel-content ul {
-  list-style: none;
-}
-
-/* 🔥 Links estilo booking SOLO dentro de paneles */
-.panel-content a {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-  transition: opacity 0.3s ease;
-}
-
-.panel-content a:hover {
-  opacity: 0.7;
-}
-
-.panel-content a:visited {
-  color: #fff;
-}
-
-.close-button {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* =================================
-   TRA GRID
-================================= */
-.tra-grid {
-  display: flex;
-  gap: 30px;
-}
-
-.tra-column {
-  flex: 1;
-}
-
-.tra-column h3 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 10px;
-}
-
-/* =================================
-   BOOKING LINK
-================================= */
-.booking-mail {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-}
-
-.booking-mail:hover {
-  opacity: 0.7;
-}
-
-/* =================================
-   FOOTER
-================================= */
-.site-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 15px 0;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(8px);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  text-align: center;
-  font-family: 'General Sans', sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
-  z-index: 40;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  margin-top: 5px;
-}
-
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.footer-links a:hover {
-  opacity: 0.7;
-}
-
-/* =================================
-   RESPONSIVE
-================================= */
-@media (max-width: 768px) {
-
-  .buttons {
-    top: auto;
-    bottom: 40%;
-    flex-direction: column;
-    align-items: center;
+  // Cerrar con X
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeAllPanels();
+    });
   }
 
-  .tra-grid {
-    flex-direction: column;
-  }
+  // Evitar cierre al hacer clic dentro
+  content.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+});
 
-  .socials {
-    bottom: 150px;
-  }
-}
+// ==============================
+// CERRAR CON ESC
+// ==============================
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeAllPanels();
+});
