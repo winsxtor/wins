@@ -230,10 +230,9 @@ body.panel-open {
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.4);
-}
-
-.booking-mail:hover {
-  opacity: 0.7;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 /* =================================
