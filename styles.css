@@ -278,5 +278,19 @@ body.panel-open {
   .socials {
     bottom: 130px;
   }
+   
+   /* Links dentro de paneles (bio) */
+.panel-content a {
+  color: inherit;          /* usa el color del texto normal */
+  text-decoration: underline;
+}
+
+.panel-content a:visited {
+  color: inherit;          /* evita que se pongan morados */
+}
+
+.panel-content a:hover {
+  opacity: 0.8;            /* efecto sutil al pasar el mouse */
+}
 
 }
