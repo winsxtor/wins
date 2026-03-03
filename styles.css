@@ -316,4 +316,27 @@ body.panel-open {
 .site-footer .footer-links a {
   text-decoration: none;
 }
+   /* Footer en una sola línea */
+.site-footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.site-footer .footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer .footer-links li {
+  display: inline;
+}
+
+.site-footer .footer-links a {
+  text-decoration: none;
+}
 }
