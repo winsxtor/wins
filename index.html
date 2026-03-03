@@ -1,180 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WINS THE DEEJAAY</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WINS THE DJ | DJ & Urban World Music</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Wins The DJ – DJ y productor del Pacífico colombiano. Urban World Music, festivales, clubes y shows en vivo." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="WINS THE DJ">
+  <meta property="og:description" content="DJ y productor del Pacífico colombiano. Urban World Music.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/preview.jpg">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
 <body>
 
-<header>
-  <style>
-        /* Asegúrate de que el video ocupa el espacio del logo */
-        .logo-video {
-            width: 320px;
-            height: 240px;
-        }
-    </style>   
-    <!-- Video en lugar de logo -->
-    <video autoplay loop muted playsinline class="logo-video" onplay="this.controls=false;">
-        <source src="LOGOANIMADOWINS.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
+  <!-- VIDEO BACKGROUND -->
+  <div class="video-container">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="assets/recap.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
     </video>
-</header>
+  </div>
 
-<main>
-    <!-- Sección 1: About Wins + Bio -->
-    <section id="about">
-        <div class="about-container">
-        <h2>Vení te cuento quien soy</h2>
-        <p>DJ y Beatmaker desde 2012. Inicié mi carrera como Wins Selectah y ahora me hago conocer como WINS. Mi estilo fusiona géneros como Dancehall, Reggaetón, Salsa y Hip Hop, con World Music como Currulao, Chirimía, Soca, Afrobeat, Amapiano, entre otros. Esto me ha permitido participar en festivales y tocar en diferentes ciudades..</p>
-    </section>
+  <div class="overlay">
 
-  <!-- Sección 2: Trayectoria TimeLine -->
-<section id="trayectoria">
-    <div class="trayectoria-container">
-        <h3>Pillá, esta es mi trayectoria.</h3>
-        <ul>
-            <li><strong>2012:</strong> Inicia mi carrera como Wins Selectah.</li>
-            <li><strong>2014:</strong> Llega mi primer festival: Oktoberfest Cali.</li>
-            <li><strong>2015:</strong> Festival Sultana Cali.</li>
-            <li><strong>2016:</strong> Lulada Fest Cali, Frontera Sonora Ipiales.</li>
-            <li><strong>2016:</strong> Inicia mi residencia en <a href="https://lapergola.co/" target="_blank" style="color: #6A0DAD;">La Pérgola Clandestina</a> (Club #50 en el mundo y #1 en Colombia)
-            <li><strong>2019:</strong> Giré en más de 10 ciudades en Colombia.</li>
-             <li><strong>2020:</strong> Fckng Pandemia.</li>
-            <li><strong>2021:</strong> DJ oficial de <a href="https://ada.lnk.to/AAA" target="_blank" style="color: #6A0DAD;">DAWERxDAMPER</a> (dúo pionero de afrofurismo en Colombia).</li>
-            <li><strong>2022:</strong> Gané el premio al mejor DJ urbano.</li>
-            <li><strong>2023:</strong> DAWERxDAMPER nominados al Latin Grammy.</li>
-            <li><strong>2024:</strong> DJ invitado a la clausura de la COP16 En Cali / Set número 4 en <a href="https://youtu.be/oeYSwN4qHJw?si=bBOZU3u44YHlGiTO" target="_blank" style="color: #6A0DAD;">Punto Parlante</a> Cali.</li>
-        </ul>
-    </div>
-</section>
+    <header class="top-section">
 
-    <!-- Sección 3: Tour Dates -->
-    <section id="tour">
-        <h3>  Tour DosMil Veinticinco AFuego</h3>
-        <div class="tour-container">
-        <ul>
-             <li>SELVAJE - TAYRONA (Santa Marta), 10 de enero 2025.</li>
-             <li>SAN VALENTÍN (Pasto), 14 de febrero 2025.</li>
-             <li>LA JUNGLA by HYPE Colombia (Villavicencio), 8 de marzo 2025.</li>
-             <li>NOCHE PRIETA- SUBSUELO Sala de Eventos (Cali), 15 de marzo 2025.</li>
-             <li>BAILE SAGRADO - COSTEÑO BEACH (Santa Marta), 19 de abril 2025.</li>
-             <li>FESTIVAL LA SOLAR FT PUNTO PARLANTE - (Medellin), 3 de Mayo 2025.</li>
-             <li>NOCHE PRIETA - SUBSUELO Sala de Eventos (Cali), 31 de Mayo 2025.</li> 
-             <li>DJ SET EN DON INVITA - (Ibague), 29 de Junio 2025.</li>
-             <li>DJ SET EN AFRODISIA - (Medellin), 18 de Julio 2025.</li>
-             <li>NOCHE PRIETA - SUBSUELO sala de Eventos (Cali), 2 de Agosto 2025.</li>
-             <li>RESIDENCIA AGOSTO PERGOLA CLANDESTINA - (Cali), 6, 9, 15, 16, 22 y 28 de Agosto 2025.</li>
-             <li>DJ SET EN DEF JAMAICA - (Soacha), 8 de Agosto 2025.</li>
-             <li>DJ SET EN EVENTO PRIVADO - (Rozo), 30 de Agosto 2025.</li>
-             <li>SHOW DELFINA DIB - (Cali), 20 DE Septiembre 2025.</li>
-            <li> DJ SET LA CENTRAL  - (Pereira), 14 de Noviembre 2025.</li>
-            <li>DJ SET OASIS FEST - (Santa Rosa del Cabal), 16 de Noviembre 2025.</li>
-            
-            
-        </ul>
-    </section>
-    <!-- Sección 4: SoundCloud -->
-    <section id="soundcloud">
-        <h3>Métele oído </h3>
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1913953496&color=%23ff5c00&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    </section>
-    
-    
-<!-- Sección 5: Video de YouTube -->
-<section id="youtube">
-    <h3>Hey! Píllate este set</h3>
-    <a href="https://youtu.be/oeYSwN4qHJw?si=HZkEi-jbU3zH4jKJ" target="_blank">
-        <img src="SET4WINS.png" alt="Video YouTube" />
-    </a>
-</section>
+      <!-- SOCIALS -->
+      <nav class="socials">
+        <a href="https://www.instagram.com/wins_thedeejaay/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://soundcloud.com/wins_thedeejaay" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-soundcloud"></i>
+        </a>
+        <a href="https://www.tiktok.com/@winsthedeejaay" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.facebook.com/winsthedeejaay" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </nav>
 
-    <!-- Sección 5: Galería -->
-    <section id="galeria">
-        <h3>Aqui fotos melas, porque el que es bonito, es bonito</h3>
-        <div class="galeria-grid">
-            <div class="foto">
-                <a href="DSC08702-Mejorado-NR.jpg" target="_blank">
-                    <img src="DSC08702-Mejorado-NR.jpg" alt="Evento 1">
-                </a>
-            </div>
-            <div class="foto">
-                <a href="DSC08707-Mejorado-NR.jpg" target="_blank">
-                    <img src="DSC08707-Mejorado-NR.jpg" alt="Evento 2">
-                </a>
-            </div>
-            <div class="foto">
-                <a href="DSC08717-Mejorado-NR.jpg" target="_blank">
-                    <img src="DSC08717-Mejorado-NR.jpg" alt="Evento 3">
-                </a>
-            </div>
+      <!-- MAIN BUTTONS -->
+      <div class="buttons">
+        <button data-panel="bio">Quién soy</button>
+        <button data-panel="tra">Dónde he tocado</button>
+        <button data-panel="events">Próximos eventos</button>
+        <button data-panel="contact">Booking</button>
+      </div>
+
+    </header>
+
+    <!-- PANELS -->
+    <main>
+
+      <!-- BIO -->
+      <section class="panel" id="bio">
+        <div class="panel-content">
+          <span class="close-button">&times;</span>
+          <h2>SOY</h2>
+          <p>
+            Explorador sonoro desde 2012, mi ADN mezcla el Urban World Music con la profunda herencia del Pacífico colombiano. Esta visión única, sumada a mi rol como miembro de Punto Parlante y ganador a Mejor DJ Urbano, me ha llevado a comandar los shows en vivo de artistas de talla Grammy y Billboard como Dawer x Damper y Venesti.
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- Sección 8: Redes Sociales -->
-    <section id="social-media">
-        <h3>¡Cae con tu follow!</h3>
-        <div class="social-buttons">
-            <a href="https://www.instagram.com/wins_thedeejaay/" target="_blank" class="social-button instagram">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="https://www.facebook.com/winsthedeejaay" target="_blank" class="social-button facebook">
-                <i class="fab fa-facebook-f"></i> Facebook
-            </a>
-            <a href="https://www.tiktok.com/@winsthedeejaay?_t=8rVdnSMcJQ0&_r=1" target="_blank" class="social-button tiktok">
-                <i class="fab fa-tiktok"></i> TikTok
-            </a>
-            <a href="https://soundcloud.com/wins_thedeejaay" target="_blank" class="social-button soundcloud">
-                <i class="fab fa-soundcloud"></i> SoundCloud
-            </a>
+      <!-- TRAJECTORY -->
+      <section class="panel" id="tra">
+        <div class="panel-content">
+          <span class="close-button">&times;</span>
+          <h2>SE HAN HECHO VAINAS</h2>
+
+          <div class="tra-grid">
+
+            <div class="tra-column">
+              <h3>Festivales</h3>
+              <ul>
+                <li>Estéreo Picnic (2023)</li>
+                <li>La Solar (2025)</li>
+                <li>Afrovice (2023, 2025)</li>
+                <li>Selvaje (2025)</li>
+                <li>La Jungla By Hype(2025)</li>
+                <li>Baile Sagrado (2025)</li>
+              </ul>
+            </div>
+
+            <div class="tra-column">
+              <h3>Clubs & Venues</h3>
+              <p class="residency-info">8 años de residencia en La Pérgola Clandestina</p>
+              <ul>
+                <li>Def Jamaica</li>
+                <li>El Candelario</li>
+                <li>La Central</li>
+                <li>Don Invita</li>
+              </ul>
+            </div>
+
+          </div>
         </div>
-    </section>
+      </section>
 
-</main>
+      <!-- EVENTS -->
+      <section class="panel" id="events">
+        <div class="panel-content">
+          <span class="close-button">&times;</span>
+          <h2>LO QUE SE VIENE</h2>
+          <p>Próximamente estaré en Noche Prieta (Cali), El Pepino Bar (Bogotá) y Río Hostel (Santa Marta).</p>
+        </div>
+      </section>
 
-<footer>
-    <p>&copy; 2025 WINS THE DEEJAAY. Todos los derechos reservados.</p>
-    <ul>
+      <!-- CONTACT -->
+      <section class="panel" id="contact">
+        <div class="panel-content">
+          <span class="close-button">&times;</span>
+          <h2>BOOKING</h2>
+          <p>
+            <a href="mailto:contacto@winsdj.com" class="booking-mail">
+              contacto@winsdj.com
+            </a>
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 WINS THE DEEJAAY. Todos los derechos reservados.</p>
+      <ul class="footer-links">
         <li><a href="privacidad.html">Política de Privacidad</a></li>
         <li><a href="terminos.html">Términos de Servicio</a></li>
-    </ul>
-</footer>
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();  // Evitar la redirección
+      </ul>
+    </div>
+  </footer>
 
-        const formData = {
-            name: document.querySelector('#name').value,
-            email: document.querySelector('#email').value,
-            message: document.querySelector('#message').value
-        };
-
-        fetch("https://formsubmit.co/ajax/contacto@winsdj.com", {
-            method: "POST",
-            headers: { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('responseMessage').innerHTML = '<h2>¡Mensaje enviado con éxito!</h2><p>Gracias por ponerte en contacto. Te responderé lo antes posible.</p>';
-            document.getElementById('contactForm').reset();  // Limpiar el formulario
-        })
-        .catch(error => {
-            document.getElementById('responseMessage').innerHTML = '<h2>Oops, algo salió mal. Inténtalo de nuevo.</h2>';
-            console.error('Error:', error);
-        });
-    });
-</script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
