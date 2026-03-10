@@ -77,3 +77,20 @@ panels.forEach(panel => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeAllPanels();
 });
+function openPanel(targetId, button) {
+  const panel = document.getElementById(targetId);
+  if (!panel) return;
+
+  closeAllPanels();
+
+  panel.classList.add('show');
+  button.classList.add('active');
+  body.classList.add('panel-open');
+
+  // reiniciar animación de listas
+  panel.querySelectorAll('li').forEach(li => {
+    li.style.animation = "none";
+    li.offsetHeight;
+    li.style.animation = "";
+  });
+}
