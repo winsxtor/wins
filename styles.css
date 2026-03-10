@@ -314,7 +314,7 @@ body.panel-open {
   position: absolute;
   left: 0;
   top: 0;
-  color: #cfcfcf;
+  color: #2f80ff;
   font-size: 0.9rem;
   transition: all 0.25s ease;
 }
