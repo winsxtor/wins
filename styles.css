@@ -290,4 +290,54 @@ body.panel-open {
   .socials {
     bottom: 180px;
   }
+}/* LISTAS CON ROMBO OUTLINE */
+
+.panel-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
 }
+
+.panel-content li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeList 0.5s ease forwards;
+}
+
+/* ROMBO */
+.panel-content li::before {
+  content: "◈";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #cfcfcf;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.panel-content li:hover::before {
+  color: #ffffff;
+  transform: scale(1.3);
+}
+
+/* ANIMACIÓN DE APARICIÓN */
+@keyframes fadeList {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* DELAY ESCALONADO */
+.panel-content li:nth-child(1) { animation-delay: 0.05s; }
+.panel-content li:nth-child(2) { animation-delay: 0.1s; }
+.panel-content li:nth-child(3) { animation-delay: 0.15s; }
+.panel-content li:nth-child(4) { animation-delay: 0.2s; }
+.panel-content li:nth-child(5) { animation-delay: 0.25s; }
+.panel-content li:nth-child(6) { animation-delay: 0.3s; }
+.panel-content li:nth-child(7) { animation-delay: 0.35s; }
