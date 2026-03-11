@@ -62,7 +62,7 @@
       <div class="sc-play-wrap">
         <button class="sc-play-btn" id="scPlayBtn" aria-label="Reproducir set en SoundCloud">
           <span class="sc-play-icon"><i class="fa-solid fa-play"></i></span>
-          <span class="sc-play-text">AFRO HITS VOL.1</span>
+          <span class="sc-play-text">PLAY SET</span>
         </button>
       </div>
 
@@ -133,7 +133,6 @@
       </section>
 
       <!-- EVENTS -->
-           <!-- EVENTS -->
       <section class="panel" id="events">
         <div class="panel-content">
           <span class="close-button">&times;</span>
@@ -190,7 +189,6 @@
       var ready  = false;
       var playing = false;
 
-      // Init widget once API script is loaded
       function initWidget() {
         widget = SC.Widget(iframe);
 
@@ -214,7 +212,6 @@
         });
       }
 
-      // Wait for SC api to be available
       function waitForSC() {
         if (typeof SC !== 'undefined' && SC.Widget) {
           initWidget();
@@ -225,7 +222,6 @@
 
       btn.addEventListener('click', function() {
         if (!ready) {
-          // Not ready yet — try to init and play
           waitForSC();
           setTimeout(function() {
             if (ready) { widget.play(); }
