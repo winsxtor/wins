@@ -58,6 +58,14 @@
         </a>
       </nav>
 
+      <!-- SOUNDCLOUD PLAY BUTTON -->
+      <div class="sc-play-wrap">
+        <button class="sc-play-btn" id="scPlayBtn" aria-label="Reproducir set en SoundCloud">
+          <span class="sc-play-icon"><i class="fa-solid fa-play"></i></span>
+          <span class="sc-play-text">AFRO HITS VOL.1</span>
+        </button>
+      </div>
+
       <!-- MAIN BUTTONS -->
       <div class="buttons">
         <button data-panel="bio">Quién soy</button>
@@ -165,5 +173,75 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- SOUNDCLOUD WIDGET (oculto) -->
+  <iframe id="scWidget"
+    width="0" height="0"
+    style="position:absolute;visibility:hidden;pointer-events:none;"
+    scrolling="no" frameborder="no" allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wins_thedeejaay/afrohits-vol-1&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
+  </iframe>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script>
+    (function() {
+      var btn    = document.getElementById('scPlayBtn');
+      var iframe = document.getElementById('scWidget');
+      var widget = null;
+      var ready  = false;
+      var playing = false;
+
+      // Init widget once API script is loaded
+      function initWidget() {
+        widget = SC.Widget(iframe);
+
+        widget.bind(SC.Widget.Events.READY, function() {
+          ready = true;
+        });
+
+        widget.bind(SC.Widget.Events.PLAY, function() {
+          playing = true;
+          btn.classList.add('playing');
+        });
+
+        widget.bind(SC.Widget.Events.PAUSE, function() {
+          playing = false;
+          btn.classList.remove('playing');
+        });
+
+        widget.bind(SC.Widget.Events.FINISH, function() {
+          playing = false;
+          btn.classList.remove('playing');
+        });
+      }
+
+      // Wait for SC api to be available
+      function waitForSC() {
+        if (typeof SC !== 'undefined' && SC.Widget) {
+          initWidget();
+        } else {
+          setTimeout(waitForSC, 100);
+        }
+      }
+
+      btn.addEventListener('click', function() {
+        if (!ready) {
+          // Not ready yet — try to init and play
+          waitForSC();
+          setTimeout(function() {
+            if (ready) { widget.play(); }
+          }, 500);
+          return;
+        }
+        if (playing) {
+          widget.pause();
+        } else {
+          widget.play();
+        }
+      });
+
+      waitForSC();
+    })();
+  </script>
+
 </body>
 </html>
