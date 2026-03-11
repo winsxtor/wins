@@ -429,10 +429,137 @@ body.panel-open {
 }
 
 /* DELAY ESCALONADO */
-.panel-content li:nth-child(1) { animation-delay: 0.09s; }
-.panel-content li:nth-child(2) { animation-delay: 0.15s; }
-.panel-content li:nth-child(3) { animation-delay: 0.2s; }
-.panel-content li:nth-child(4) { animation-delay: 0.25s; }
-.panel-content li:nth-child(5) { animation-delay: 0.3s; }
-.panel-content li:nth-child(6) { animation-delay: 0.35s; }
-.panel-content li:nth-child(7) { animation-delay: 0.4s; }
+.panel-content li:nth-child(1) { animation-delay: 0.05s; }
+.panel-content li:nth-child(2) { animation-delay: 0.1s; }
+.panel-content li:nth-child(3) { animation-delay: 0.15s; }
+.panel-content li:nth-child(4) { animation-delay: 0.2s; }
+.panel-content li:nth-child(5) { animation-delay: 0.25s; }
+.panel-content li:nth-child(6) { animation-delay: 0.3s; }
+.panel-content li:nth-child(7) { animation-delay: 0.35s; }
+
+/* =================================
+   SOUNDCLOUD PLAY BUTTON
+================================= */
+.sc-play-wrap {
+  position: absolute;
+  bottom: calc(38% + 10px); /* justo encima de los socials, debajo de los botones */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+
+/* posición dinámica: entre .buttons (35% top) y .socials (bottom: 60px) */
+/* la ubicamos en el medio vertical entre ambos */
+.sc-play-wrap {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+
+.sc-play-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 22px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.04);
+  color: #fff;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.sc-play-btn:hover {
+  background: rgba(255, 85, 0, 0.15);
+  border-color: rgba(255, 85, 0, 0.6);
+  color: #ff5500;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 85, 0, 0.2);
+}
+
+.sc-play-btn:hover .sc-play-icon {
+  background: #ff5500;
+  color: #fff;
+}
+
+.sc-play-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* pulsing dot when playing */
+.sc-play-btn.playing .sc-play-icon {
+  background: #ff5500;
+  border-color: #ff5500;
+  animation: scPulse 1.5s ease-in-out infinite;
+}
+
+.sc-play-btn.playing .sc-play-icon i {
+  display: none;
+}
+
+.sc-play-btn.playing .sc-play-icon::after {
+  content: '';
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+/* equalizer bars when playing */
+.sc-play-btn.playing .sc-play-icon {
+  position: relative;
+}
+
+.sc-play-btn.playing .sc-play-icon::before {
+  content: '▮▮▮';
+  font-size: 6px;
+  letter-spacing: 1px;
+  animation: eqBounce 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes scPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,85,0,0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(255,85,0,0); }
+}
+
+@keyframes eqBounce {
+  from { transform: scaleY(0.6); }
+  to   { transform: scaleY(1.2); }
+}
+
+.sc-play-btn.playing {
+  border-color: rgba(255, 85, 0, 0.5);
+  color: #ff5500;
+  background: rgba(255, 85, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 780px) {
+  .sc-play-wrap {
+    top: 52%;
+  }
+
+  .sc-play-btn {
+    font-size: 10px;
+    padding: 10px 18px;
+    gap: 8px;
+  }
+}
