@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  
-<base href="/" />
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -11,165 +8,176 @@
 
   <!-- SEO -->
   <meta name="description" content="Wins The DJ – DJ y productor del Pacífico colombiano. Urban World Music, festivales, clubes y shows en vivo." />
+  <link rel="canonical" href="https://winsdj.online/" />
 
-<!-- Open Graph / Redes Sociales (Facebook, WhatsApp, LinkedIn) -->
+  <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:site_name" content="WINS THE DJ" />
   <meta property="og:url" content="https://winsdj.online/" />
   <meta property="og:title" content="WINS THE DJ | DJ & Urban World Music" />
   <meta property="og:description" content="DJ y productor del Pacífico colombiano. Urban World Music, festivales, clubes y shows en vivo." />
+  <!-- VERIFICA que este archivo exista con este nombre exacto (¿previe.jpg o preview.jpg?) -->
   <meta property="og:image" content="https://winsdj.online/assets/previe.jpg" />
 
-  <!-- Twitter Cards (Twitter / X) -->
+  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="WINS THE DJ | DJ & Urban World Music" />
   <meta name="twitter:description" content="DJ y productor del Pacífico colombiano. Urban World Music, festivales, clubes y shows en vivo." />
   <meta name="twitter:image" content="https://winsdj.online/assets/previe.jpg" />
 
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "WINS THE DJ",
+    "jobTitle": "DJ y productor",
+    "url": "https://winsdj.online/",
+    "sameAs": [
+      "https://www.instagram.com/wins_thedeejaay/",
+      "https://soundcloud.com/wins_thedeejaay",
+      "https://www.tiktok.com/@winsthedeejaay",
+      "https://www.facebook.com/winsthedeejaay",
+      "https://www.youtube.com/@winsthedejay"
+    ]
+  }
+  </script>
+
+  <!-- Fuentes (Fontshare) -->
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@600&f[]=bricolage-grotesque@400&display=swap" />
+
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Styles -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
-
 </head>
 <body>
 
   <!-- VIDEO BACKGROUND -->
   <div class="video-container">
-    <video autoplay muted loop playsinline preload="metadata">
+    <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
       <source src="assets/recapWI.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
     </video>
   </div>
 
   <div class="overlay">
 
     <header class="top-section">
+      <h1 class="sr-only">WINS THE DJ – DJ &amp; Urban World Music</h1>
 
-      <!-- SOCIALS -->
-      <nav class="socials">
-        <a href="https://www.instagram.com/wins_thedeejaay/" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://soundcloud.com/wins_thedeejaay" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-soundcloud"></i>
-        </a>
-        <a href="https://www.tiktok.com/@winsthedeejaay" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
-        <a href="https://www.facebook.com/winsthedeejaay" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-        <a href="https://www.youtube.com/@winsthedejay" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </nav>
+      <!-- BOTONES PRINCIPALES -->
+      <div class="buttons">
+        <button type="button" data-panel="bio" aria-haspopup="dialog">Quién soy</button>
+        <button type="button" data-panel="tra" aria-haspopup="dialog">Dónde he tocado</button>
+        <button type="button" data-panel="events" aria-haspopup="dialog">Próximos eventos</button>
+        <button type="button" data-panel="contact" aria-haspopup="dialog">Booking</button>
+      </div>
 
-      <!-- SOUNDCLOUD PLAY BUTTON -->
+      <!-- SOUNDCLOUD PLAY -->
       <div class="sc-play-wrap">
-        <button class="sc-play-btn" id="scPlayBtn" aria-label="Reproducir set en SoundCloud">
-          <span class="sc-play-icon"><i class="fa-solid fa-play"></i></span>
-          <span class="sc-play-text">PLAY SET</span>
+        <button type="button" class="sc-play-btn" id="scPlayBtn" aria-label="Reproducir set en SoundCloud" aria-pressed="false">
+          <span class="sc-play-icon" aria-hidden="true">
+            <i class="fa-solid fa-play"></i>
+            <span class="eq"><i></i><i></i><i></i></span>
+          </span>
+          <span class="sc-play-text" id="scPlayText">PLAY SET</span>
         </button>
       </div>
 
-      <!-- MAIN BUTTONS -->
-      <div class="buttons">
-        <button data-panel="bio">Quién soy</button>
-        <button data-panel="tra">Dónde he tocado</button>
-        <button data-panel="events">Próximos eventos</button>
-        <button data-panel="contact">Booking</button>
-      </div>
-
+      <!-- REDES -->
+      <nav class="socials" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/wins_thedeejaay/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://soundcloud.com/wins_thedeejaay" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+          <i class="fa-brands fa-soundcloud" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.tiktok.com/@winsthedeejaay" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/winsthedeejaay" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/@winsthedejay" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+      </nav>
     </header>
 
-    <!-- PANELS -->
+    <!-- PANELES -->
     <main>
 
       <!-- BIO -->
-      <section class="panel" id="bio">
+      <section class="panel" id="bio" role="dialog" aria-modal="true" aria-labelledby="bio-title">
         <div class="panel-content">
-          <span class="close-button">&times;</span>
-          <h2>SOY</h2>
-        <p>
-  Explorador sonoro desde 2012, mi ADN mezcla el Urban World Music con la profunda herencia del Pacífico colombiano. Esta visión única, sumada a mi rol como miembro de 
-  <a href="https://www.instagram.com/puntoparlante/" target="_blank" rel="noopener noreferrer">Punto Parlante</a> 
-  y ganador a Mejor DJ Urbano 2022, me ha llevado a comandar los shows en vivo de artistas de talla Latin Grammy nominees como 
-  <a href="https://www.instagram.com/dawerxdamper/" target="_blank" rel="noopener noreferrer">Dawer x Damper</a>, 
-  Latin Billboard winner como 
-  <a href="https://www.instagram.com/venestimusic/" target="_blank" rel="noopener noreferrer">Venesti</a> 
-  y ser residente del club nro 1 de Colombia 
-  <a href="https://www.instagram.com/lapergolaclandestina/" target="_blank" rel="noopener noreferrer">La Pérgola Clandestina</a>.
-</p>
+          <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
+          <h2 id="bio-title">SOY</h2>
+          <p>
+            Explorador sonoro desde 2012, mi ADN mezcla el Urban World Music con la profunda herencia del Pacífico colombiano. Esta visión única, sumada a mi rol como miembro de
+            <a href="https://www.instagram.com/puntoparlante/" target="_blank" rel="noopener noreferrer">Punto Parlante</a>
+            y ganador del premio a Mejor DJ Urbano 2022, me ha llevado a comandar los shows en vivo de artistas nominados al Latin Grammy como
+            <a href="https://www.instagram.com/dawerxdamper/" target="_blank" rel="noopener noreferrer">Dawer x Damper</a>
+            y ganadores del Latin Billboard como
+            <a href="https://www.instagram.com/venestimusic/" target="_blank" rel="noopener noreferrer">Venesti</a>,
+            y a ser residente del club n.º 1 de Colombia,
+            <a href="https://www.instagram.com/lapergolaclandestina/" target="_blank" rel="noopener noreferrer">La Pérgola Clandestina</a>.
+          </p>
         </div>
       </section>
 
-      <!-- TRAJECTORY -->
-      <section class="panel" id="tra">
+      <!-- TRAYECTORIA -->
+      <section class="panel" id="tra" role="dialog" aria-modal="true" aria-labelledby="tra-title">
         <div class="panel-content">
-          <span class="close-button">&times;</span>
-          <h2>SE HAN HECHO VAINAS</h2>
+          <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
+          <h2 id="tra-title">SE HAN HECHO VAINAS</h2>
 
           <div class="tra-grid">
-
             <div class="tra-column">
               <h3>Festivales</h3>
-              <ul>
+              <ul class="diamond-list">
                 <li>Estéreo Picnic (2023)</li>
                 <li>La Solar (2025)</li>
                 <li>Afrovice (2023, 2025)</li>
                 <li>Selvaje (2025)</li>
-                <li>La Jungla By Hype(2025)</li>
+                <li>La Jungla By Hype (2025)</li>
                 <li>Baile Sagrado (2025)</li>
               </ul>
             </div>
 
             <div class="tra-column">
-              <h3>Clubs & Venues</h3>
+              <h3>Clubs &amp; Venues</h3>
               <p class="residency-info">8 años de residencia en La Pérgola Clandestina</p>
-              <ul>
+              <ul class="diamond-list">
                 <li>Def Jamaica</li>
                 <li>El Candelario</li>
                 <li>La Central</li>
                 <li>Don Invita</li>
               </ul>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- EVENTS -->
-      <section class="panel" id="events">
+      <!-- EVENTOS -->
+      <section class="panel" id="events" role="dialog" aria-modal="true" aria-labelledby="events-title">
         <div class="panel-content">
-          <span class="close-button">&times;</span>
-          <h2>LO QUE SE VIENE</h2>
-
-          <ul class="events-list">
-            <li>4 de Abril: Noche Prieta (Cali)</li>
-            <li>7 de Abril: Cali.Dá, Río Hostel (Santa Marta)</li>
-            <li>18 de Abril: Visaje by Punto Parlante (Medellin)</li>
-            <li>25 de Abril: Red bull fight4Ustyle (Cali)</li>
-            <li>30 de Abril: Late Night Music 15 aniversario (Panama)</li>
-            <li>23 de Mayo: El Afro Festival (Medellin)</li>
-            <li>7 de Junio: Festival Olas Sonoras, Viajero Tayrona (Santa Marta)</li>
-            <li>19 de Junio: Residencia Musical, La Pergola(Cali)</li>
-             <li>20 de Junio: Casa Corrinche, Curador(Cali)</li>
-            <li>3, 9, 19, 25 y 31 de Julio: Residencia Musical, La Pergola(Cali)</li>
-            <li>23 de Agosto: Festival Bonanza, El Rio Hostel(Santa Marta)</li>
-          </ul>
-
+          <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
+          <h2 id="events-title">LO QUE SE VIENE</h2>
+          <p class="events-empty">Próximamente. Las nuevas fechas se anuncian en
+            <a href="https://www.instagram.com/wins_thedeejaay/" target="_blank" rel="noopener noreferrer">Instagram</a>.
+          </p>
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section class="panel" id="contact">
+      <!-- BOOKING -->
+      <section class="panel" id="contact" role="dialog" aria-modal="true" aria-labelledby="contact-title">
         <div class="panel-content">
-          <span class="close-button">&times;</span>
-          <h2>BOOKING</h2>
+          <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
+          <h2 id="contact-title">BOOKING</h2>
           <p>
             <a href="mailto:winsthedejay@gmail.com" class="booking-mail">winsthedejay@gmail.com</a>
           </p>
@@ -177,86 +185,27 @@
       </section>
 
     </main>
-
   </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-content">
-      <p>&copy; 2026 WINS THE DEJAY. Todos los derechos reservados.</p>
+      <p>&copy; 2026 WINS THE DJ. Todos los derechos reservados.</p>
       <ul class="footer-links">
         <li><a href="terminos.html">Términos &amp; Privacidad</a></li>
       </ul>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-
   <!-- SOUNDCLOUD WIDGET (oculto) -->
-  <iframe id="scWidget"
-    width="0" height="0"
+  <iframe id="scWidget" title="Reproductor de SoundCloud"
+    width="0" height="0" tabindex="-1" aria-hidden="true"
     style="position:absolute;visibility:hidden;pointer-events:none;"
     scrolling="no" frameborder="no" allow="autoplay"
     src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wins_thedeejaay/afrohits-vol-1&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
   </iframe>
-  <script src="https://w.soundcloud.com/player/api.js"></script>
-  <script>
-    (function() {
-      var btn    = document.getElementById('scPlayBtn');
-      var iframe = document.getElementById('scWidget');
-      var widget = null;
-      var ready  = false;
-      var playing = false;
-
-      function initWidget() {
-        widget = SC.Widget(iframe);
-
-        widget.bind(SC.Widget.Events.READY, function() {
-          ready = true;
-        });
-
-        widget.bind(SC.Widget.Events.PLAY, function() {
-          playing = true;
-          btn.classList.add('playing');
-        });
-
-        widget.bind(SC.Widget.Events.PAUSE, function() {
-          playing = false;
-          btn.classList.remove('playing');
-        });
-
-        widget.bind(SC.Widget.Events.FINISH, function() {
-          playing = false;
-          btn.classList.remove('playing');
-        });
-      }
-
-      function waitForSC() {
-        if (typeof SC !== 'undefined' && SC.Widget) {
-          initWidget();
-        } else {
-          setTimeout(waitForSC, 100);
-        }
-      }
-
-      btn.addEventListener('click', function() {
-        if (!ready) {
-          waitForSC();
-          setTimeout(function() {
-            if (ready) { widget.play(); }
-          }, 500);
-          return;
-        }
-        if (playing) {
-          widget.pause();
-        } else {
-          widget.play();
-        }
-      });
-
-      waitForSC();
-    })();
-  </script>
+  <script src="https://w.soundcloud.com/player/api.js" async></script>
+  <script src="script.js" defer></script>
 
 </body>
 </html>
