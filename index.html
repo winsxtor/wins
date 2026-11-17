@@ -66,15 +66,17 @@
 
   <div class="overlay">
 
+    <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch to English">EN</button>
+
     <header class="top-section">
       <h1 class="sr-only">WINS THE DJ – DJ &amp; Urban World Music</h1>
 
       <!-- BOTONES PRINCIPALES -->
       <div class="buttons">
-        <button type="button" data-panel="bio" aria-haspopup="dialog">Quién soy</button>
-        <button type="button" data-panel="tra" aria-haspopup="dialog">Dónde he tocado</button>
-        <button type="button" data-panel="events" aria-haspopup="dialog">Próximos eventos</button>
-        <button type="button" data-panel="contact" aria-haspopup="dialog">Booking</button>
+        <button type="button" data-panel="bio" aria-haspopup="dialog" data-i18n="nav.bio">Quién soy</button>
+        <button type="button" data-panel="tra" aria-haspopup="dialog" data-i18n="nav.tra">Dónde he tocado</button>
+        <button type="button" data-panel="events" aria-haspopup="dialog" data-i18n="nav.events">Próximos eventos</button>
+        <button type="button" data-panel="contact" aria-haspopup="dialog" data-i18n="nav.contact">Booking</button>
       </div>
 
       <!-- SOUNDCLOUD PLAY -->
@@ -115,8 +117,8 @@
       <section class="panel" id="bio" role="dialog" aria-modal="true" aria-labelledby="bio-title">
         <div class="panel-content">
           <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
-          <h2 id="bio-title">SOY</h2>
-          <p>
+          <h2 id="bio-title" data-i18n="bio.title">SOY</h2>
+          <p data-i18n-html="bio.body">
             Explorador sonoro desde 2012, mi ADN mezcla el Urban World Music con la profunda herencia del Pacífico colombiano. Esta visión única, sumada a mi rol como miembro de
             <a href="https://www.instagram.com/puntoparlante/" target="_blank" rel="noopener noreferrer">Punto Parlante</a>
             y ganador del premio a Mejor DJ Urbano 2022, me ha llevado a comandar los shows en vivo de artistas nominados al Latin Grammy como
@@ -133,24 +135,34 @@
       <section class="panel" id="tra" role="dialog" aria-modal="true" aria-labelledby="tra-title">
         <div class="panel-content">
           <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
-          <h2 id="tra-title">SE HAN HECHO VAINAS</h2>
+          <h2 id="tra-title" data-i18n="tra.title">SE HAN HECHO VAINAS</h2>
 
           <div class="tra-grid">
             <div class="tra-column">
-              <h3>Festivales</h3>
+              <h3 data-i18n="tra.festivals">Festivales</h3>
+              <h4 class="tra-sub" data-i18n="tra.intl">Internacionales</h4>
+              <ul class="diamond-list">
+                <li>Afro Punk Bahía</li>
+                <li>Coca-Cola Fest México (2023, 2026)</li>
+                <li>Late Night Panamá (2026)</li>
+                <li>Cinco Doce México (2026)</li>
+              </ul>
+              <h4 class="tra-sub" data-i18n="tra.nat">Nacionales</h4>
               <ul class="diamond-list">
                 <li>Estéreo Picnic (2023)</li>
                 <li>La Solar (2025)</li>
-                <li>Afrovice (2023, 2025)</li>
-                <li>Selvaje (2025)</li>
-                <li>La Jungla By Hype (2025)</li>
+                <li>Olas Sonoras (2026)</li>
                 <li>Baile Sagrado (2025)</li>
+                <li>Selvaje (2025)</li>
+                <li>Bonanza Lite (2026)</li>
+                <li>Afrovice Fest (2025)</li>
+                <li>El Afro Fest (2026)</li>
               </ul>
             </div>
 
             <div class="tra-column">
               <h3>Clubs &amp; Venues</h3>
-              <p class="residency-info">8 años de residencia en La Pérgola Clandestina</p>
+              <p class="residency-info" data-i18n="tra.residency">8 años de residencia en La Pérgola Clandestina</p>
               <ul class="diamond-list">
                 <li>Def Jamaica</li>
                 <li>El Candelario</li>
@@ -166,8 +178,8 @@
       <section class="panel" id="events" role="dialog" aria-modal="true" aria-labelledby="events-title">
         <div class="panel-content">
           <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
-          <h2 id="events-title">LO QUE SE VIENE</h2>
-          <p class="events-empty">Próximamente. Las nuevas fechas se anuncian en
+          <h2 id="events-title" data-i18n="events.title">LO QUE SE VIENE</h2>
+          <p class="events-empty" data-i18n-html="events.body">Próximamente. Las nuevas fechas se anuncian en
             <a href="https://www.instagram.com/wins_thedeejaay/" target="_blank" rel="noopener noreferrer">Instagram</a>.
           </p>
         </div>
@@ -178,9 +190,12 @@
         <div class="panel-content">
           <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
           <h2 id="contact-title">BOOKING</h2>
-          <p>
-            <a href="mailto:winsthedejay@gmail.com" class="booking-mail">winsthedejay@gmail.com</a>
-          </p>
+          <a class="wa-btn" id="waBtn" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span data-i18n="contact.wa">Escríbeme por WhatsApp</span>
+          </a>
+          <p class="mail-line"><span data-i18n="contact.or">O por correo:</span> 
+            <a href="mailto:winsthedejay@gmail.com" class="booking-mail">winsthedejay@gmail.com</a></p>
         </div>
       </section>
 
@@ -190,9 +205,9 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-content">
-      <p>&copy; 2026 WINS THE DJ. Todos los derechos reservados.</p>
+      <p data-i18n="footer.rights">&copy; 2026 WINS THE DJ. Todos los derechos reservados.</p>
       <ul class="footer-links">
-        <li><a href="terminos.html">Términos &amp; Privacidad</a></li>
+        <li><a href="terminos.html" data-i18n="footer.terms">Términos &amp; Privacidad</a></li>
       </ul>
     </div>
   </footer>

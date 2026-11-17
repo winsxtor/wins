@@ -363,6 +363,17 @@ a:focus-visible {
   margin-bottom: 10px;
 }
 
+.tra-sub {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+}
+
+.tra-sub + .diamond-list {
+  margin-top: 8px;
+}
+
 /* =================================
    LISTAS CON ROMBO
 ================================= */
@@ -456,6 +467,70 @@ a:focus-visible {
 
 .footer-links a:hover {
   opacity: 0.6;
+}
+
+/* =================================
+   IDIOMA
+================================= */
+.lang-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  top: calc(16px + env(safe-area-inset-top, 0px));
+  z-index: 35;
+  min-width: 44px;
+  padding: 8px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-family: 'General Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.lang-toggle:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =================================
+   WHATSAPP (panel Booking)
+================================= */
+.panel-content .wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 20px;
+  padding: 13px 24px;
+  border: 0;
+  border-radius: 50px;
+  background: #25d366;
+  color: #04210f;
+  font-family: 'General Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel-content .wa-btn:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+}
+
+.panel-content .wa-btn i {
+  font-size: 1.2rem;
+}
+
+.mail-line {
+  color: rgba(255,255,255,0.75);
 }
 
 /* =================================
