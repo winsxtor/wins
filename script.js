@@ -23,7 +23,11 @@ const I18N = {
     'events.title': 'LO QUE SE VIENE',
     'events.body': 'Próximamente. Las nuevas fechas se anuncian en <a href="https://www.instagram.com/wins_thedeejaay/" target="_blank" rel="noopener noreferrer">Instagram</a>.',
     'contact.wa': 'Escríbeme por WhatsApp',
-    'contact.or': 'O por correo:',
+    'epk.label': 'Descargar EPK',
+    'contact.photos': 'Fotos de prensa',
+    'photos.hint': 'Toca una foto para descargarla en alta calidad.',
+    'copy.aria': 'Copiar correo',
+    'copy.done': 'Correo copiado',
     'footer.rights': '© 2026 WINS THE DJ. Todos los derechos reservados.',
     'footer.terms': 'Términos & Privacidad',
     'play.label': 'PLAY SET',
@@ -51,7 +55,11 @@ const I18N = {
     'events.title': 'COMING UP',
     'events.body': 'Coming soon. New dates are announced on <a href="https://www.instagram.com/wins_thedeejaay/" target="_blank" rel="noopener noreferrer">Instagram</a>.',
     'contact.wa': 'Message me on WhatsApp',
-    'contact.or': 'Or by email:',
+    'epk.label': 'Download EPK',
+    'contact.photos': 'Press photos',
+    'photos.hint': 'Tap a photo to download it in full quality.',
+    'copy.aria': 'Copy email',
+    'copy.done': 'Email copied',
     'footer.rights': '© 2026 WINS THE DJ. All rights reserved.',
     'footer.terms': 'Terms & Privacy',
     'play.label': 'PLAY SET',
@@ -94,6 +102,12 @@ function applyLang(lang) {
   const wa = document.getElementById('waBtn');
   if (wa) {
     wa.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(t('wa.text'));
+  }
+
+  const copyBtn = document.getElementById('copyMail');
+  if (copyBtn) {
+    copyBtn.setAttribute('aria-label', t('copy.aria'));
+    copyBtn.setAttribute('title', t('copy.aria'));
   }
 
   document.title = t('meta.title');
@@ -266,4 +280,73 @@ document.addEventListener('keydown', e => {
 
   setState(false);
   waitForSC();
+})();
+
+// ==============================
+// COPIAR CORREO
+// ==============================
+(function () {
+  const btn = document.getElementById('copyMail');
+  const status = document.getElementById('copyStatus');
+  const mail = document.querySelector('.mail-btn');
+  if (!btn || !mail) return;
+  const address = mail.getAttribute('href').replace('mailto:', '');
+  let timer = null;
+
+  function fallbackCopy() {
+    const ta = document.createElement('textarea');
+    ta.value = address;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function showDone() {
+    const icon = btn.querySelector('i');
+    btn.classList.add('copied');
+    icon.className = 'fa-solid fa-check';
+    status.textContent = t('copy.done');
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      btn.classList.remove('copied');
+      icon.className = 'fa-regular fa-copy';
+      status.textContent = '';
+    }, 2000);
+  }
+
+  btn.addEventListener('click', () => {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(address).then(showDone, () => { if (fallbackCopy()) showDone(); });
+    } else if (fallbackCopy()) {
+      showDone();
+    }
+  });
+})();
+
+// ==============================
+// FOTOS DE PRENSA (se muestran solo las que existan en /assets)
+// ==============================
+(function () {
+  const box = document.getElementById('pressPhotos');
+  if (!box) return;
+  const imgs = box.querySelectorAll('img');
+
+  function check(img) {
+    if (img.complete && img.naturalWidth > 0) {
+      box.hidden = false;
+    } else if (img.complete) {
+      img.parentElement.remove(); // no existe el archivo
+    }
+  }
+
+  imgs.forEach(img => {
+    img.addEventListener('load',  () => { box.hidden = false; });
+    img.addEventListener('error', () => { img.parentElement.remove(); });
+    check(img);
+  });
 })();

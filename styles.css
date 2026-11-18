@@ -500,14 +500,33 @@ a:focus-visible {
 }
 
 /* =================================
-   WHATSAPP (panel Booking)
+   CONTACTO (panel Booking)
 ================================= */
-.panel-content .wa-btn {
-  display: inline-flex;
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin-top: 4px;
+}
+
+.btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  margin: 4px 0 20px;
-  padding: 13px 24px;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.05rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.panel-content .wa-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 22px 8px 8px;
   border: 0;
   border-radius: 50px;
   background: #25d366;
@@ -515,8 +534,14 @@ a:focus-visible {
   font-family: 'General Sans', system-ui, sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel-content .wa-btn .btn-icon {
+  background: #04210f;
+  color: #25d366;
+  font-size: 1.2rem;
 }
 
 .panel-content .wa-btn:hover {
@@ -525,12 +550,188 @@ a:focus-visible {
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
 }
 
-.panel-content .wa-btn i {
-  font-size: 1.2rem;
+.mail-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
 }
 
-.mail-line {
+.panel-content .mail-btn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 22px 8px 8px;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 50px;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-family: 'General Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.3px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.panel-content .mail-btn .btn-icon {
+  background: #fff;
+  color: #000;
+}
+
+.panel-content .mail-btn .mail-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.panel-content .mail-btn:hover {
+  opacity: 1;
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.panel-content .mail-btn:hover .btn-icon {
+  background: #000;
+  color: #fff;
+}
+
+.copy-btn {
+  width: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.copy-btn.copied {
+  background: #25d366;
+  border-color: #25d366;
+  color: #04210f;
+}
+
+.copy-status {
+  min-height: 1.2em;
+  margin: 0;
+  font-size: 0.8rem;
   color: rgba(255,255,255,0.75);
+}
+
+/* Botón EPK */
+.panel-content .epk-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 22px 8px 8px;
+  border: 1px solid #d29507;
+  border-radius: 50px;
+  background: rgba(210,149,7,0.12);
+  color: #f0b429;
+  font-family: 'General Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel-content .epk-btn .btn-icon {
+  background: #d29507;
+  color: #000;
+}
+
+.epk-tag {
+  margin-left: auto;
+  padding: 3px 9px;
+  border-radius: 50px;
+  border: 1px solid currentColor;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+}
+
+.panel-content .epk-btn:hover {
+  opacity: 1;
+  background: #d29507;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(210,149,7,0.35);
+}
+
+.panel-content .epk-btn:hover .btn-icon {
+  background: #000;
+  color: #d29507;
+}
+
+/* Fotos de prensa */
+.press-photos {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.press-photos[hidden] {
+  display: none;
+}
+
+.press-photos h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 4px;
+}
+
+.panel-content .press-hint {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.panel-content .press-grid a {
+  display: block;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: rgba(255,255,255,0.05);
+}
+
+.press-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.panel-content .press-grid a:hover {
+  opacity: 1;
+}
+
+.press-grid a:hover img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 520px) {
+  .press-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* =================================

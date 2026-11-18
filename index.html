@@ -190,12 +190,38 @@
         <div class="panel-content">
           <button type="button" class="close-button" aria-label="Cerrar">&times;</button>
           <h2 id="contact-title">BOOKING</h2>
-          <a class="wa-btn" id="waBtn" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-            <span data-i18n="contact.wa">Escríbeme por WhatsApp</span>
-          </a>
-          <p class="mail-line"><span data-i18n="contact.or">O por correo:</span> 
-            <a href="mailto:winsthedejay@gmail.com" class="booking-mail">winsthedejay@gmail.com</a></p>
+          <div class="contact-actions">
+            <a class="wa-btn" id="waBtn" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+              <span class="btn-icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></span>
+              <span data-i18n="contact.wa">Escríbeme por WhatsApp</span>
+            </a>
+            <a class="epk-btn" href="assets/EPK%20WINS%20DJ%202027.pdf" download="EPK WINS DJ 2027.pdf">
+              <span class="btn-icon" aria-hidden="true"><i class="fa-solid fa-file-arrow-down"></i></span>
+              <span data-i18n="epk.label">Descargar EPK</span>
+              <span class="epk-tag" aria-hidden="true">PDF</span>
+            </a>
+            <div class="mail-row">
+              <a class="mail-btn" href="mailto:winsthedejay@gmail.com">
+                <span class="btn-icon" aria-hidden="true"><i class="fa-regular fa-envelope"></i></span>
+                <span class="mail-text">winsthedejay@gmail.com</span>
+              </a>
+              <button type="button" class="copy-btn" id="copyMail" aria-label="Copiar correo" title="Copiar correo">
+                <i class="fa-regular fa-copy" aria-hidden="true"></i>
+              </button>
+            </div>
+            <p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="press-photos" id="pressPhotos" hidden>
+            <h3 data-i18n="contact.photos">Fotos de prensa</h3>
+            <p class="press-hint" data-i18n="photos.hint">Toca una foto para descargarla en alta calidad.</p>
+            <div class="press-grid">
+        <a href="assets/press-1.jpg" download><img src="assets/press-1.jpg" alt="WINS THE DJ, foto de prensa 1" loading="lazy"></a>
+        <a href="assets/press-2.jpg" download><img src="assets/press-2.jpg" alt="WINS THE DJ, foto de prensa 2" loading="lazy"></a>
+        <a href="assets/press-3.jpg" download><img src="assets/press-3.jpg" alt="WINS THE DJ, foto de prensa 3" loading="lazy"></a>
+        <a href="assets/press-4.jpg" download><img src="assets/press-4.jpg" alt="WINS THE DJ, foto de prensa 4" loading="lazy"></a>
+            </div>
+          </div>
         </div>
       </section>
 
